@@ -1,3 +1,12 @@
+.nav-picture img{
+  width: 100%;
+  height: 30px;
+}
+
+.nav-content{
+  display: flex;
+  justify-content: space-between;
+}
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -10,3 +19,147 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+$dark_blue: #253044;
+$medium_blue: #2F4668;
+$blue: #274972;
+$light_blue: #375B89;
+$yellow: #AB964B;
+$light_yellow: #C2B689;
+
+$white: #fff;
+$grey: #ccc;
+$dark_grey: #474749;
+$soft_red: #B87F7C;
+$soft_yellow: #CFAE89;
+$red: #7D1710;
+$yellow: #A76C29;
+
+.grey p{
+  color: $dark_grey !important;
+}
+
+.grey a{
+  color: $dark_grey !important;
+}
+.navbar-afri{
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between !important;
+  text-decoration: none;
+  .nav-item {
+    a{
+      text-decoration: none;
+      color: $white
+    }
+    p {
+      text-decoration: none;
+      margin: 0 0 0 35px;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+
+  .nav-tagline{
+    p{
+      font-size: 2rem;
+      font-weight: 400;
+      color: $yellow;
+      text-align: center;
+    }
+  }
+}
+
+.navbar-brand{
+  width: 65px;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-afri-white {
+  background-color: white;
+
+  .nav-item {
+    text-decoration: none;
+    p {
+      text-decoration: none;
+      margin: 0 0 0 35px;
+      color: gray;
+      cursor: pointer;
+    }
+  }
+}
+
+.navbar .navbar-collapse {
+  flex-grow: 0;
+}
+
+.nav-item {
+  text-decoration: none;
+  p {
+    text-decoration: none;
+    margin: 0 0 0 35px;
+    color: white;
+  }
+}
+
+.nav-main-items {
+  margin-top: 3px;
+  li {
+    display: inline-block;
+    i{
+      color: #A45D58;
+    }
+  }
+}
+
+
+#navbar-two-white {
+  background-color: white;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+}
+
+.dropdown-menu {
+  background-colour: none !important;
+  a {
+    text-align: center !important;
+    margin: 0 0 0 0 !important;
+  }
+}
+
+.nav-item dropdown{
+  a{
+  colour: white ;
+  }
+}
+.black {
+  color: gray !important;
+}
+
+#nav-logo{
+  background-blend-mode: multiply;
+}
+
+.banner-right li {
+    display: inline-block;
+    a {
+      text-decoration: none;
+      color: white !important;
+      margin-right: 50px;
+    }
+  }
+
+

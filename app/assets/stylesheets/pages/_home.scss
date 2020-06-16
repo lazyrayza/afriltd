@@ -1,1 +1,158 @@
 // Specific CSS for your home-page
+body{
+  font-family: 'landasans', sans-serif;
+}
+// colours
+
+$dark_blue: #253044;
+$medium_blue: #2F4668;
+$blue: #274972;
+$light_blue: #375B89;
+$yellow: #AB964B;
+$light_yellow: #C2B689;
+
+
+.direction{
+  // padding-top: 3%;
+}
+
+.direction-btn{
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: $white;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1%;
+  &:hover{
+    cursor: pointer;
+  }
+  i{
+    margin: auto;
+    color: $yellow;
+  }
+}
+
+.product-title{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.secondary-title{
+  font-size: 2rem;
+  color: $yellow;
+  margin: 4%;
+}
+
+.prodcut-categories-containers{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.category{
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+}
+
+
+.box{
+  width: 300px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  border-radius: 0px 0px 50px 0px;
+  p{
+    color: $white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: auto;
+  }
+}
+.blue{
+  background-color: $blue;
+}
+.yellow{
+  background-color: $yellow;
+}
+
+
+.vehicle{
+  background-color: $grey;
+  border-radius: 0px 0px 50px 0px;
+  display: grid;
+  grid-template-rows: 60px 240px;
+}
+.vehicle-photo{
+  display: flex;
+  justify-content: center;
+  img{
+    margin: auto;
+  }
+}
+.vehicle-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  p{
+  font-size: 15px;
+  color: $dark_blue;
+  text-align: end;
+  }
+}
+
+
+.services-title{
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  p{
+
+  }
+}
+
+
+.service-container{
+  display: flex;
+  justify-content: center;
+}
+.secvices-grid{
+  display: grid;
+  grid-template-rows: 220px 220px;
+  grid-template-columns: 280px 280px 280px;
+  grid-gap: 40px;
+}
+
+
+.service-individual{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-image {
+  display: flex;
+  justify-content: center;
+  img{
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  border: solid 5px $yellow;
+  object-fit: cover;
+  }
+}
+
+.service-sub-title{
+  text-align: center;
+  color: $blue;
+  font-size: 15px;
+}
+
+
+
+
+
+

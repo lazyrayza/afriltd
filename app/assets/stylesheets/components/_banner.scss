@@ -1,0 +1,59 @@
+body{
+  font-family: 'landasans', sans-serif;
+}
+// colours
+
+$dark_blue: #253044;
+$medium_blue: #2F4668;
+$blue: #274972;
+$light_blue: #375B89;
+$yellow: #AB964B;
+$light_yellow: #C2B689;
+
+.banner{
+   background-image: url("https://res.cloudinary.com/durtng53m/image/upload/v1592223711/8-Stunning-HD-Tesla-Wallpapers-4_4d470f76dc99e18ad75087b1b8410ea9.png");
+  background-size: cover;
+  height: 90vh;
+  color: #eee;
+  .tag-line{
+  display: flex;
+  justify-content: center;
+  padding: 15%;
+  p{
+    font-size: 3rem;
+  }
+  svg{
+    height: 70px;
+  }
+}
+  .content-information{
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .social-holder{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    .icons{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 20px;
+      margin: auto;
+      .icon {
+        margin: 4%;
+        svg{
+        height: 30px;
+        width: 30px;
+        fill: $yellow;
+          &:hover{
+            fill: $light_yellow;
+            box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.62);
+
+          }
+        }
+      }
+    }
+  }
+}
