@@ -1,0 +1,119 @@
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.secondary-title{
+  font-size: 2rem;
+  color: $yellow;
+  margin-top: 4%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.large-title{
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+
+}
+
+.vehicle-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  p{
+    font-size: 15px;
+    color: $dark_blue;
+    text-align: end;
+  }
+}
+
+.large-box-title{
+  margin: auto;
+  p{
+    color: $white;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin: auto;
+  }
+}
+
+.services-title{
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.legacy-titles{
+  margin: auto;
+  i{
+    opacity: 0;
+  }
+  p{
+    font-size: 2rem;
+    font-weight: bold;
+    color: $white;
+    &:hover{
+      color: $yellow;
+      cursor: pointer;
+      i{
+        opacity: 1;
+        color: $yellow;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .vehicle-title p {
+    font-size: 10px;
+    margin: 5%;
+  }
+
+  .legacy-titles p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  #extra-push{
+    margin-top: 10%;
+  }
+  .large-title {
+    font-size: 2rem;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 992px) and(min-width: 768px) {
+  .legacy-titles{
+    p{
+      font-size: 1rem;
+    }
+  }
+
+  .large-box-title{
+    p{
+      font-size: 1.4rem;
+    }
+  }
+
+  .vehicle-title p {
+    font-size: 12px;
+    margin: 5%;
+  }
+}
+
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 1200px) and (min-width: 992px) {
+  .legacy-titles{
+    p{
+      font-size: 1.4rem;
+    }
+  }
+}
+

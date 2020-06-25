@@ -1,0 +1,54 @@
+$dark_blue: #253044;
+$medium_blue: #2F4668;
+$blue: #274972;
+$light_blue: #375B89;
+$yellow: #AB964B;
+$light_yellow: #C2B689;
+
+$colors: (
+  raise: $light_blue,
+
+);
+
+.side-nav-constant{
+  height: 100vh;
+  width: 15vw;
+  background: $dark_blue;
+
+  p{
+    color: white;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  i{
+    margin-left: 5%;
+  }
+}
+.smaller{
+  font-size: 12px;
+  color: $yellow !important;
+}
+.list-group-item{
+  background-color: $dark_blue !important;
+}
+
+.sidenav-btn{
+  width: 100%;
+  min-height: 30%;
+  &:hover{
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+  }
+  &:active {
+    border-left: 4px solid white;
+  }
+}
+
+@each $button, $color in $colors {
+  .#{$button} {
+    --color: #{$color};
+    --hover: #{adjust-hue($color, 45deg)};
+  }
+}

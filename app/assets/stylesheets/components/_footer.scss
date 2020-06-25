@@ -1,0 +1,202 @@
+body{
+  font-family: 'landasans', sans-serif;
+}
+// colours
+
+$dark_blue: #253044;
+$medium_blue: #2F4668;
+$blue: #274972;
+$light_blue: #375B89;
+$yellow: #AB964B;
+$light_yellow: #C2B689;
+
+
+.footer{
+  // background: url('https://res.cloudinary.com/durtng53m/image/upload/v1592302242/Screenshot_2020-06-16_at_13.58_1.jpg');
+  background-color: $medium_blue;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  width:100%;
+  height:auto;
+}
+
+.footer-container {
+  position: relative;
+  // bottom:0;
+  width:100%;
+  height:auto;
+  text-align: start;
+
+  // padding: 50px;
+  // color: white;
+  .footer-nav{
+    // border-top: 1px solid white;
+    // border-bottom: 1px solid white;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 1fr;
+    width: 90%;
+    margin: auto;
+
+    .footer-logo{
+      display: flex;
+      justify-content: center;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      padding-top: 35px;
+      padding-bottom: 5px;
+      img{
+        width: 80%;
+        margin: auto;
+      }
+    }
+
+    .lists{
+      display: flex;
+      justify-content: space-evenly;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      padding-top: 35px;
+    padding-bottom: 5px;
+    }
+    .list-title{
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .yellow-title{
+      color: $yellow;
+    }
+    .blue-title{
+      color: $blue;
+    }
+    ul{
+      color: white;
+      list-style-type:none;
+      padding-left: 0;
+      font-size: 14px;
+      line-height: 2rem;
+    }
+
+    .socials-list{
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      padding-top: 35px;
+    padding-bottom: 5px;
+    }
+    .socials-holder{
+      display: flex;
+      justify-content: space-between;
+
+
+      .icons{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+
+        .icon {
+          margin: 4%;
+          svg{
+          height: 30px;
+          width: 30px;
+          fill: #08538A;
+            &:hover{
+              fill: $light_blue;
+              // box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.62);
+
+            }
+          }
+        }
+      }
+    }
+  }
+  .copyright{
+      display: flex;
+      color: $white;
+      width: 90%;
+      margin: auto;
+    }
+}
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .footer-container .footer-nav {
+     display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas: "logo logo logo logo"
+    "list list list socials"
+  }
+  .footer-container .footer-nav .footer-logo {
+    grid-area: logo;
+    img{
+      height: 100%;
+    }
+  }
+  .footer-container .footer-nav .lists {
+    grid-area: list;
+  }
+  .footer-container .footer-nav .list-title {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  .footer-container .footer-nav ul {
+    font-size: 12px;
+    line-height: 2.5rem;
+    width: 90%;
+  }
+  .footer-container .footer-nav .socials-list {
+    grid-area: socials;
+  }
+  .footer-container .footer-nav .socials-holder .icons {
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 767px) and (min-width: 576px) {
+  // .footer-container .footer-nav {
+  //   grid-template-columns: 60% 40%;
+  // }
+  // .footer-container .footer-nav .footer-logo {
+  //   display: none;
+  // }
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 992px) and(min-width: 768px) {
+
+  .footer-container .footer-nav .socials-holder {
+    display: flex;
+    /* justify-content: center; */
+  }
+
+  .footer-container .footer-nav .socials-holder .icons {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .footer-container .footer-nav .footer-logo img {
+    width: 130%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

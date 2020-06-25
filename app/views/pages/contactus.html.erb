@@ -1,0 +1,87 @@
+<div class="contact-section">
+  <div class="title">
+    <div class="secondary-title">
+      <p>Get in Touch</p>
+    </div>
+    <div class="large-title">
+      <p> WE'D LOVE TO HEAR FROM YOU</p>
+    </div>
+  </div>
+  <div class="contact-content">
+    <div class="contact-info">
+      <div class="info">
+        <p><i class="fa fa-phone"></i>+255671827262</p>
+      </div>
+      <div class="info">
+        <p><i class="fas fa-envelope"></i>info@africarriers.co.tz</p>
+      </div>
+      <div class="info">
+        <p><i class="fa fa-map-marker"></i>J.Nyerere Road, Dar es Salaam</p>
+      </div>
+    </div>
+    <div class="contact-boxes-holder">
+      <div class="contact-form-holder">
+        <div class="contact-form">
+          <form action="https://formspree.io/mleplren" method="POST" >
+
+             <!--  <label>Feedback:</label>
+             <textarea name="message"></textarea>
+             <label>Your Name:</label>
+             <input name="name" type="text" required/>
+             <label>Your Email: </label>
+             <input name="_replyto" type="email" required/> -->
+
+
+            <label>
+              Your Name:
+              <input type="text" name="name" required/>
+            </label>
+            <label>
+              Your phone:
+              <input type="text" name="number">
+            </label>
+            <label>
+              Your email:
+              <input type="email" name="_replyto">
+            </label>
+            <label>
+              Your message:
+              <textarea name="message"></textarea>
+            </label><br>
+
+            <!-- your other form fields go here -->
+
+            <button type="submit" class="form-button">Send</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="contact-map">
+        <div class="map-box">
+          <div id="map"></div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -6.85422889, lng: 39.22387592};
+
+
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 15, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+</script>
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?AIzaSyDOCOnKgVj_909zHG4J8Neqg2kqrfPTUY0&callback=initMap">
+</script>

@@ -1,0 +1,148 @@
+$dark_blue: #253044;
+$medium_blue: #2F4668;
+$blue: #274972;
+$light_blue: #375B89;
+$yellow: #AB964B;
+$light_yellow: #C2B689;
+
+
+.about-conatiner{
+  height: 100vh;
+}
+
+.aboutus-banner{
+  width: 100vw;
+  height: 45vh;
+  background-image: url('https://images.pexels.com/photos/1044290/pexels-photo-1044290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+
+}
+
+.aboutus-content{
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  // font-family: 'Raleway', sans-serif;
+
+  .aboutus-content-title{
+    text-align: center;
+    margin: 4%;
+    h1 {
+      font-weight: bold;
+    }
+
+  }
+
+  .aboutus-content-introduction{
+    width: 60%;
+    text-align: justify;
+    margin: auto;
+    line-height: 2rem;
+    color: grey;
+    a{
+      text-decoration: none;
+      color: $blue ;
+      cursor: pointer;
+    }
+    .hidden-list{
+      display: none;
+
+    }
+    .show-list{
+      cursor: pointer;
+      &:hover{
+        .hidden-list{
+          display: block;
+      transition: ease 1s;
+        }
+      }
+    }
+  }
+}
+
+
+.brands-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-brands{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 4%;
+}
+
+.main{
+  display: flex;
+  img{
+    width: 50%;
+    margin: auto;
+    transition: ease 1s;
+    &:hover{
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+  }
+}
+
+.secondary-brands{
+  display: grid;
+  grid-template-columns: repeat(6, 16.7%);
+  margin-bottom: 5%;
+}
+
+.sec{
+  display: flex;
+  img{
+    width: 40%;
+    margin: auto;
+    transition: ease 1s;
+    &:hover{
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+  }
+}
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .secondary-brands{
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: repeat(2, 50%);
+    margin-bottom: 5%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

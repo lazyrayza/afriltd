@@ -1,0 +1,152 @@
+
+.contact-content{
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+}
+
+
+
+.contact-info{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+  .info{
+    p{
+      font-size: 20px;
+      color: $dark_grey;
+    }
+    i{
+      font-size: 1.3rem;
+      color: $yellow;
+      margin-right: 4px;
+    }
+  }
+}
+
+.contact-boxes-holder{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6%;
+}
+
+.contact-form-holder{
+  height: 500px;
+  width: 50%;
+}
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: auto;
+
+  input[type='text'], [type='email'], select, textarea {
+  background: none;
+  border: none;
+  border-bottom: solid 2px #474544;
+  color: #474544;
+  font-size: 1.000em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  // margin: 0em 0 1.875em 0;
+  // padding: 0 0 0.875em 0;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  }
+  input[type='text']:focus, [type='email']:focus, textarea:focus {
+  outline: none;
+  padding: 0 0 0.875em 0;
+}
+
+}
+
+.form-button {
+  background: $blue;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.875em;
+  font-weight: bold;
+  outline: none;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  &:hover {
+    background: #474544;
+    color: #F2F3EB;
+    box-shadow: -14px 10px 34px 0px rgba(0,0,0,0.21);
+
+  }
+
+}
+
+.contact-map{
+  width: 65%;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .contact-info {
+    flex-wrap: wrap;
+  }
+  .contact-boxes-holder {
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    height: 100%;
+  }
+  .contact-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .info{
+    text-align: center;
+    width: 100%;
+  }
+  .contact-form-holder{
+    height: 500px;
+    width: 100%;
+    // margin-top: 5%;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+  label {
+    width: 100%;
+  }
+
+  .contact-map {
+    width: 100%;
+    // display: none;
+    margin-top: 5%;
+  }
+
+  #map {
+    width: 100%;
+    height: 200px;
+    box-shadow: none;
+    margin: auto;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 992px) and(min-width: 768px) {
+
+  .contact-form{
+    width: 70%;
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 1200px) and (min-width: 992px) {
+  .contact-form{
+    width: 70%;
+  }
+
+}
