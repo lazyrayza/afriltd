@@ -1,5 +1,30 @@
 .gallery-conatiner{
   margin-top: 10%;
   height: 100vh;
+  display: flex;
+}
+.display-box{
+  background: white;
 }
 
+
+.normall-display {
+  // height: 100%;
+  // display: flex;
+  // justify-content: center;
+  // img{
+  //   width: 60%;
+  //   margin: auto;
+  // }
+}
+
+.lmd-display{
+  height: 100%;
+  display: none;
+  display: flex;
+  justify-content: center;
+  img{
+    width: 60%;
+    margin: auto;
+  }
+}

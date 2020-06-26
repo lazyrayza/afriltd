@@ -12,7 +12,8 @@ $colors: (
 
 .side-nav-constant{
   height: 100vh;
-  width: 15vw;
+  max-width: 15vw;
+  min-width: 15vw;
   background: $dark_blue;
 
   p{
@@ -27,11 +28,21 @@ $colors: (
   }
 }
 .smaller{
-  font-size: 12px;
+  font-size: 14px;
   color: $yellow !important;
+  cursor: pointer;
 }
 .list-group-item{
   background-color: $dark_blue !important;
+}
+
+.show-border{
+  border-left: 8px #ffff solid;
+
+}
+
+.collapsed{
+  border: none;
 }
 
 .sidenav-btn{

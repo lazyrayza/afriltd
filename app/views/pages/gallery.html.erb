@@ -2,7 +2,7 @@
   <div class="side-nav-constant" id="sidebar">
     <div class="sidenav-buttons-holder">
       <div class="list-group border-0 text-center text-md-left commercial">
-        <a href="#menu1" class="list-group-item d-inline-block collapsed" data-toggle="collapse" aria-expanded="false"><i class="fa fa-dashboard"></i> <span class="d-none d-md-inline">COMMERCIAL</span> </a>
+        <a href="#menu1" class="list-group-item d-inline-block collapsed show-border" data-toggle="collapse" aria-expanded="false"><i class="fa fa-dashboard"></i> <span class="d-none d-md-inline">COMMERCIAL</span> </a>
         <div class="collapse" id="menu1" data-parent="#sidebar">
             <a href="#menu1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false"> Buses  <i class="fas fa-bus-alt fa-2x"></i></a>
             <div class="collapse" id="menu1sub1" data-parent="#menu1">
@@ -15,10 +15,10 @@
         <div class="collapse" id="menu1" data-parent="#sidebar">
             <a href="#menu1sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false">Trucks <i class="fas fa-truck-moving fa-2x"></i> </a>
             <div class="collapse" id="menu1sub2" data-parent="#menu1">
-                <a href="#" class="list-group-item smaller" data-parent="#menu1sub2">Light & Medium Duty</a>
-                <a href="#" class="list-group-item smaller" data-parent="#menu1sub2">Heavy Duty</a>
-                <a href="#" class="list-group-item smaller" data-parent="#menu1sub2">Tipper</a>
-                <a href="#menu1sub2sub2" class="list-group-item smaller" data-toggle="collapse" aria-expanded="false">Subitem c </a>
+                <p class="list-group-item smaller" data-parent="#menu1sub2" onclick="displayLmd()">Light & Medium Duty</p>
+                <p href="#" class="list-group-item smaller" data-parent="#menu1sub2">Heavy Duty</p>
+                <p href="#" class="list-group-item smaller" data-parent="#menu1sub2">Tipper</p>
+                <p href="#menu1sub2sub2" class="list-group-item smaller" data-toggle="collapse" aria-expanded="false">Subitem c </a>
             </div>
         </div>
         <div class="collapse" id="menu1" data-parent="#sidebar">
@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="list-group border-0 text-center text-md-left retail">
-        <a href="#menu2" class="list-group-item d-inline-block collapsed" data-toggle="collapse" aria-expanded="false"><i class="fa fa-dashboard"></i> <span class="d-none d-md-inline">RETAIL</span> </a>
+        <a href="#menu2" class="list-group-item d-inline-block collapsed show-border" data-toggle="collapse" aria-expanded="false"><i class="fa fa-dashboard"></i> <span class="d-none d-md-inline">RETAIL</span> </a>
         <div class="collapse" id="menu2" data-parent="#sidebar">
             <a href="#menu2sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">Subitem 1 </a>
             <div class="collapse" id="menu2sub1" data-parent="#menu2">
@@ -42,7 +42,7 @@
         </div>
       </div>
       <div class="list-group border-0 text-center text-md-left brands">
-        <a href="#menu3" class="list-group-item d-inline-block collapsed" data-toggle="collapse" aria-expanded="false"><i class="fa fa-dashboard"></i> <span class="d-none d-md-inline">BRANDS</span> </a>
+        <a href="#menu3" class="list-group-item d-inline-block collapsed show-border" data-toggle="collapse" aria-expanded="false"><i class="fa fa-dashboard"></i> <span class="d-none d-md-inline">BRANDS</span> </a>
         <div class="collapse" id="menu3" data-parent="#sidebar">
             <a href="#menu3sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">Eicher <img src="https://res.cloudinary.com/durtng53m/image/upload/v1592390519/Screenshot_2020-06-17_at_14-removebg-preview_2.png" style="width: 40%"></a>
             <div class="collapse" id="menu3sub1" data-parent="#menu3">
@@ -63,5 +63,31 @@
 
     </div>
   </div>
+  <div class="display-box">
+    <div class="normall-display">
+    </div>
+    <div class="lmd-display" id="lmd">
+      <div class="title">
+        <p>Light & Medium Duty Trucks</p>
+      </div>
 
+      <div class="vehicle-holder">
+
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
+
+<script>
+  function displayLmd() {
+    var x = document.getElementById("lmd");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+</script>
