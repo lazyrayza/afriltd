@@ -1,0 +1,23 @@
+.make-container{
+  margin-top: 6%;
+}
+.product-holder{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .box{
+    margin: 5%;
+    img{
+      transition: ease 1s;
+    }
+    &:hover{
+      cursor: pointer;
+      img{
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+.eicher-truck-photo img{
+  width: 80%;
+}

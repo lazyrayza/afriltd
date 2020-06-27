@@ -4,7 +4,13 @@ class PagesController < ApplicationController
 
 
   def gallery
-    @models = Model.all
-    @model = Model.find(params[:model_id])
+    @eichers = Carmodel.where(make_id: '17')
+    @gds = Make.where(name: 'Golden Dragon')
+  end
+
+  def eicher
+    @make = Make.where(name: 'Eicher')
+
+    @models = Carmodel.all
   end
 end

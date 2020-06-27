@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class ModelControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should get carmodel" do
+    get model_carmodel_url
+    assert_response :success
+  end
+
 end

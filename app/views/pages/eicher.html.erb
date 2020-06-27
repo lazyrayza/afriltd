@@ -1,0 +1,22 @@
+<div class="make-container" >
+  <div class="title">
+      <div class="secondary-title">
+        <p>RANGE OF EICHER PRODUCTS</p>
+      </div>
+    </div>
+
+  <div class="product-holder">
+    <% @models.each do |model| %>
+      <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= model.id %>">
+        <div class="vehicle-title" >
+          <p><%= model.name %></p>
+        </div>
+        <div class="vehicle-photo eicher-truck-photo">
+          <%= cl_image_tag model.photo %>
+        </div>
+     </div>
+     <%= render "shared/show_car_modal", carmodel: model %>
+    <% end  %>
+  </div>
+</div>
+<%# raise  %>

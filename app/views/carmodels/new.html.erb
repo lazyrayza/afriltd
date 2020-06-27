@@ -1,0 +1,54 @@
+<style>
+  .container-booking{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .booking-box{
+    margin: auto;
+  }
+</style>
+
+
+
+<div class="container-booking" >
+  <div class="booking-box">
+    <div class='booking-title'>BOOKING</div>
+    <%= simple_form_for(@model) do |f| %>
+      <div class="booking-box-details">
+        <div class="form-inputs">
+          <%= f.input :name %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :photo, as: :file %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :available%>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :category%>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :capacity%>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :notes %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :make_id,
+                      collection: @makes,
+                      as: :radio_buttons %>
+        </div>
+
+
+        <div class="form-actions">
+          <div class="booking-update-btn">
+            <%= link_to "Back", dashboard_path, class: "secondary-button" %>
+            <%= f.button :submit, class: "primary-button" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

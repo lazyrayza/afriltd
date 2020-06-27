@@ -1,0 +1,18 @@
+<div class="make-container" >
+  <div class="title">
+      <div class="secondary-title">
+        <p>EICHER PRODUCTS - <%= @model.name %>, <%= @model.capacity %> <%= @model.category %> </p>
+      </div>
+    </div>
+
+  <div class="product-holder">
+      <div class=" box vehicle page-box" >
+        <div class="vehicle-title" >
+          <p><%= @model.name %></p>
+        </div>
+        <div class="vehicle-photo eicher-truck-photo">
+          <%= cl_image_tag @model.photo %>
+        </div>
+     </div>
+  </div>
+</div>

@@ -10,9 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_06_26_114502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "carmodels", force: :cascade do |t|
+    t.string "name"
+    t.integer "year"
+    t.string "photo"
+    t.boolean "available"
+    t.string "notes"
+    t.string "category"
+    t.string "capacity"
+    t.bigint "make_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["make_id"], name: "index_carmodels_on_make_id"
+  end
+
+  create_table "makes", force: :cascade do |t|
+    t.text "name"
+    t.text "country"
+  end
+
+  add_foreign_key "carmodels", "makes"
 end

@@ -4,25 +4,25 @@
       <div class="list-group border-0 text-center text-md-left commercial">
         <a href="#menu1" class="list-group-item d-inline-block collapsed show-border" data-toggle="collapse" aria-expanded="false"><i class="fa fa-dashboard"></i> <span class="d-none d-md-inline">COMMERCIAL</span> </a>
         <div class="collapse" id="menu1" data-parent="#sidebar">
-            <a href="#menu1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false"> Buses  <i class="fas fa-bus-alt fa-2x"></i></a>
+            <a href="#menu1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false"> <i class="fas fa-bus-alt fa-2x"></i> Buses</a>
             <div class="collapse" id="menu1sub1" data-parent="#menu1">
-                <a href="#" class="list-group-item smaller" data-parent="#menu1sub1">Staff</a>
-                <a href="#" class="list-group-item smaller" data-parent="#menu1sub1">School</a>
+                <a class="list-group-item smaller" data-parent="#menu1sub1" >Staff</a>
+                <a class="list-group-item smaller" data-parent="#menu1sub1" onclick="displaySchoolBus()">School</a>
                 <a href="#" class="list-group-item smaller" data-parent="#menu1sub1">City</a>
                 <a href="#menu1sub1sub1" class="list-group-item smaller" data-toggle="collapse" aria-expanded="false">Eicher Pro20.15N</a>
             </div>
         </div>
         <div class="collapse" id="menu1" data-parent="#sidebar">
-            <a href="#menu1sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false">Trucks <i class="fas fa-truck-moving fa-2x"></i> </a>
+            <a href="#menu1sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false"><i class="fas fa-truck-moving fa-2x"></i> Trucks</a>
             <div class="collapse" id="menu1sub2" data-parent="#menu1">
                 <p class="list-group-item smaller" data-parent="#menu1sub2" onclick="displayLmd()">Light & Medium Duty</p>
                 <p href="#" class="list-group-item smaller" data-parent="#menu1sub2">Heavy Duty</p>
-                <p href="#" class="list-group-item smaller" data-parent="#menu1sub2">Tipper</p>
+                <p class="list-group-item smaller" data-parent="#menu1sub2" onclick="displayTipper()">Tipper</p>
                 <p href="#menu1sub2sub2" class="list-group-item smaller" data-toggle="collapse" aria-expanded="false">Subitem c </a>
             </div>
         </div>
         <div class="collapse" id="menu1" data-parent="#sidebar">
-            <a href="#menu1sub3" class="list-group-item" data-toggle="collapse" aria-expanded="false">Specialist  <i class="fas fa-ambulance fa-2x"></i></i> </a>
+            <a href="#menu1sub3" class="list-group-item" data-toggle="collapse" aria-expanded="false"><i class="fas fa-ambulance fa-2x"></i> Specialist</a>
             <div class="collapse" id="menu1sub3" data-parent="#menu1">
                 <a href="#" class="list-group-item smaller" data-parent="#menu1sub3">Ambulence</a>
                 <a href="#" class="list-group-item smaller" data-parent="#menu1sub3">Fire Truck</a>
@@ -66,13 +66,79 @@
   <div class="display-box">
     <div class="normall-display">
     </div>
-    <div class="lmd-display" id="lmd">
+
+    <div class="lmd-display major-display" id="lmd" style="display: none">
       <div class="title">
-        <p>Light & Medium Duty Trucks</p>
+        <div class="secondary-title">
+          <p>Light & Medium Duty Trucks</p>
+        </div>
       </div>
 
       <div class="vehicle-holder">
+        <% @eichers.each do |vehicle| %>
+          <% if vehicle.capacity == 'lmd' %>
+            <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
+              <div class="vehicle-title" >
+                <p><%= vehicle.name %></p>
+              </div>
+              <div class="vehicle-photo eicher-truck-photo">
+                <%= cl_image_tag vehicle.photo %>
+              </div>
+           </div>
+           <%= render "shared/show_car_modal", carmodel: vehicle %>
+          <% end  %>
+        <% end  %>
+        <%# raise  %>
+      </div>
+    </div>
 
+    <div class="tipper-display major-display" id="tipper" style="display: none">
+      <div class="title">
+        <div class="secondary-title">
+          <p>Tipper Trucks</p>
+        </div>
+      </div>
+
+      <div class="vehicle-holder">
+        <% @eichers.each do |vehicle| %>
+          <% if vehicle.capacity == 'tipper' %>
+            <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
+              <div class="vehicle-title" >
+                <p><%= vehicle.name %></p>
+              </div>
+              <div class="vehicle-photo eicher-truck-photo">
+                <%= cl_image_tag vehicle.photo %>
+              </div>
+           </div>
+           <%= render "shared/show_car_modal", carmodel: vehicle %>
+          <% end  %>
+        <% end  %>
+        <%# raise  %>
+      </div>
+    </div>
+
+    <div class="schoolbuss-display major-display" id="schoolbus" style="display: none">
+      <div class="title">
+        <div class="secondary-title">
+          <p>School Buss</p>
+        </div>
+      </div>
+
+      <div class="vehicle-holder">
+        <% @eichers.each do |vehicle| %>
+          <% if vehicle.capacity == 'School' %>
+            <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
+              <div class="vehicle-title" >
+                <p><%= vehicle.name %></p>
+              </div>
+              <div class="vehicle-photo eicher-truck-photo">
+                <%= cl_image_tag vehicle.photo %>
+              </div>
+           </div>
+           <%= render "shared/show_car_modal", carmodel: vehicle %>
+          <% end  %>
+        <% end  %>
+        <%# raise  %>
       </div>
     </div>
   </div>
@@ -83,11 +149,71 @@
 
 <script>
   function displayLmd() {
-    var x = document.getElementById("lmd");
-    if (x.style.display === "block") {
-      x.style.display = "none";
+    var lmd = document.getElementById("lmd");
+    if (lmd.style.display === "block") {
+      lmd.style.display = "none";
     } else {
-      x.style.display = "block";
+      lmd.style.display = "block";
     }
   }
 </script>
+
+<script>
+  function displaySchoolBus() {
+    var school = document.getElementById("schoolbus");
+    if (school.style.display === "block") {
+      school.style.display = "none";
+    } else {
+      school.style.display = "block";
+    }
+  }
+</script>
+
+<script>
+  var sum = document.getElementsByClassName('major-display');
+  var numbers = Array.prototype.slice.call(sum);
+
+  function displayTipper() {
+    var tipper = document.getElementById("tipper");
+    if (tipper.style.display === "block") {
+      tipper.style.display = "none";
+    } else {
+      tipper.style.display = "block";
+    }
+      numbers.forEach(myFunction);
+      function myFunction(item) {
+      item.classList.add("hidden");
+    }
+  }
+
+
+  // var major = document.getElementsByClassName('major-display');
+
+  // let arry = Array.from(major);
+
+  // let final = Array.prototype.slice.call(arry);
+  // final.ForEach(hideOtherDivs);
+
+  // function hideOtherDivs(item) {
+  //   item.classList.add("hidden");
+  // };
+
+</script>
+
+<script>
+// var sum = document.getElementsByClassName('major-display');
+// var numbers = Array.prototype.slice.call(sum);
+// numbers.forEach(myFunction);
+
+// function myFunction(item) {
+//   item.classList.add("hidden");
+// }
+</script>
+
+
+
+
+
+
+
+

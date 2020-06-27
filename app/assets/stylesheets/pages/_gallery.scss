@@ -2,6 +2,7 @@
   margin-top: 10%;
   height: 100vh;
   display: flex;
+  background-color: white;
 }
 .display-box{
   background: white;
@@ -18,13 +19,28 @@
   // }
 }
 
-.lmd-display{
+.major-display{
   height: 100%;
+  width: 100%;
   display: none;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   img{
     width: 60%;
     margin: auto;
   }
+}
+.vehicle-holder{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  .box{
+    margin: 5%;
+  }
+}
+
+
+.hidden {
+  display: none;
 }
