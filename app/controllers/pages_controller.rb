@@ -5,7 +5,7 @@ class PagesController < ApplicationController
 
   def gallery
     @eichers = Carmodel.where(make_id: '17')
-    @gds = Make.where(name: 'Golden Dragon')
+    @gds = Carmodel.where(make_id: '18')
   end
 
   def eicher

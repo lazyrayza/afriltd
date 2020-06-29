@@ -1,7 +1,7 @@
 <div class="make-container" >
   <div class="title">
       <div class="secondary-title">
-        <p>EICHER PRODUCTS - <%= @model.name %>, <%= @model.capacity %> <%= @model.category %> </p>
+        <p> <%= Make.find(@model.make.id).name %> - <%= @model.name %>, <%= @model.capacity %> <%= @model.category %> </p>
       </div>
     </div>
 

@@ -36,10 +36,10 @@ class CarmodelsController < ApplicationController
   private
 
   def find_model
-    @model = Carmodel.find(params[:id])
+    @model = Carmodel.where(params[:name]).to_a.first
   end
 
   def model_params
-    params.require(:carmodel).permit(:name, :photo, :year, :available, :make_id, :type, :capacity, :category)
+    params.require(:carmodel).permit(:name, :photo, :year, :available, :make_id, :power, :capacity, :category, :grossvw, :bodytype, :cargolength, :payload )
   end
 end

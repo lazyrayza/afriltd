@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   get "/gallery/goldendragon", to: "pages#goldendragon"
   resources :makes, only: [:show, :new, :create]
   resources :carmodels, only: [:show, :new, :create]
+
+  resources :carmodels, only: :show, param: :name
 end

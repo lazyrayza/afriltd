@@ -1,6 +1,6 @@
 <style>
   .container-booking{
-    height: 100vh;
+    height: 150vh;
     display: flex;
     justify-content: space-around;
   }
@@ -14,7 +14,11 @@
 
 <div class="container-booking" >
   <div class="booking-box">
-    <div class='booking-title'>BOOKING</div>
+    <div class="title">
+        <div class="secondary-title">
+          <p>NEW VEHICLE</p>
+        </div>
+      </div>
     <%= simple_form_for(@model) do |f| %>
       <div class="booking-box-details">
         <div class="form-inputs">
@@ -24,14 +28,30 @@
           <%= f.input :photo, as: :file %>
         </div>
         <div class="form-inputs">
-          <%= f.input :available%>
+          <%= f.input :available %>
         </div>
         <div class="form-inputs">
-          <%= f.input :category%>
+          <%= f.input :category %>
         </div>
         <div class="form-inputs">
-          <%= f.input :capacity%>
+          <%= f.input :capacity %>
         </div>
+        <div class="form-inputs">
+          <%= f.input :power %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :bodytype %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :cargolength %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :payload %>
+        </div>
+        <div class="form-inputs">
+          <%= f.input :grosvw %>
+        </div>
+
         <div class="form-inputs">
           <%= f.input :notes %>
         </div>
