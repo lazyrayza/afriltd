@@ -1,15 +1,51 @@
-<style>
-  .make-container {
-    display: flex;
-    justify-content: space-around;
-  }
+<div class="make-container" >
+  <div class="title">
+    <div class="secondary-title">
+      <p>RANGE OF EICHER PRODUCTS</p>
+    </div>
+  </div>
 
-  .make-container p{
-      margin: auto;
-      font-size: 5rem;
-  }
-</style>
+  <!-- Search -->
+  <div class="search-field">
+    <%= form_tag carmodels_path, method: :get, remote: true, id: "search-form" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find your vehicle",
+        id: "input"
+      %>
+      <%= submit_tag "Search", id: "submit", class: "search-button" %>
+    <% end %>
+  </div>
+  <!-- End Search -->
+
+  <div class="product-holder">
+    <% @models.each do |model| %>
+      <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= model.id %>">
+        <div class="vehicle-title" >
+          <p><%= model.name %></p>
+        </div>
+        <div class="vehicle-photo eicher-truck-photo">
+          <%= cl_image_tag model.photo %>
+        </div>
+     </div>
+     <%= render "shared/show_car_modal", carmodel: model %>
+    <% end  %>
+  </div>
+</div>
+<%# raise  %>
 
 
 
-<div class="make-container" style="height: 100vh"><p><%= @make.name %></p> </div>
+
+  <!--AJAX Search Form -->
+<script>
+  let formSelect = document.getElementById("search-form");
+  let searchInput = document.getElementById("input");
+  let submitButton = document.getElementById("submit");
+
+  searchInput.addEventListener("keyup", (event) => {
+    submitButton.click();
+  });
+</script>
+<!-- End AJAX Search Form -->

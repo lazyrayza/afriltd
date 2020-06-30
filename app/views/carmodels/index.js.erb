@@ -1,0 +1,7 @@
+function refreshCards(innerHTML) {
+  newCardsContainer = document.querySelector(".product-holder")
+  newCardsContainer.innerHTML = innerHTML;
+ }
+
+refreshCards('<%= j render "vehicles", carmodels: @models %>');
+

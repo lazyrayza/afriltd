@@ -8,10 +8,11 @@ Rails.application.routes.draw do
   get "/career", to: "pages#career"
   get "/dashboard", to: "pages#dashboard"
   get "/gallery", to: "pages#gallery"
-  get "/gallery/eicher", to: "pages#eicher"
-  get "/gallery/goldendragon", to: "pages#goldendragon"
-  resources :makes, only: [:show, :new, :create]
-  resources :carmodels, only: [:show, :new, :create]
+  get "/ourbrands/eicher", to: "pages#eicher"
+  get "/ourbrands/goldendragon", to: "pages#goldendragon"
+  resources :makes, only: [:show, :new, :create], path: 'ourbrands'
 
-  resources :carmodels, only: :show, param: :name
+  # resources :makes, only: [:show]
+  resources :carmodels, only: [ :show, :new, :create, :index, :edit, :update ]
+
 end

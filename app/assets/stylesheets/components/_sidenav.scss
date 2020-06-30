@@ -24,8 +24,12 @@ $colors: (
     text-decoration: none;
   }
   i{
-    margin-left: 5%;
+    margin-right: 5%;
+    color: $yellow;
   }
+}
+span{
+  font-weight: bold;
 }
 .smaller{
   font-size: 14px;

@@ -1,22 +1,21 @@
 .gallery-conatiner{
-  margin-top: 10%;
+  margin-top: 7%;
   height: 100vh;
   display: flex;
   background-color: white;
 }
 .display-box{
   background: white;
+  width: 85vw;
 }
 
 
 .normall-display {
-  // height: 100%;
-  // display: flex;
-  // justify-content: center;
-  // img{
-  //   width: 60%;
-  //   margin: auto;
-  // }
+  display: flex;
+  justify-content: center;
+  svg{
+    width: 60%;
+  }
 }
 
 .major-display{

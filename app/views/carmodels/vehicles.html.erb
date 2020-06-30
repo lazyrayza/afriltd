@@ -1,11 +1,4 @@
-<div class="make-container" >
-  <div class="title">
-      <div class="secondary-title">
-        <p>RANGE OF EICHER PRODUCTS</p>
-      </div>
-    </div>
-
-  <div class="product-holder">
+<div class="product-holder">
     <% @models.each do |model| %>
       <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= model.id %>">
         <div class="vehicle-title" >
@@ -19,4 +12,3 @@
     <% end  %>
   </div>
 </div>
-<%# raise  %>

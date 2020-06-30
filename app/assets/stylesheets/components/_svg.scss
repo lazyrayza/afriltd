@@ -1,0 +1,27 @@
+.logo-svg{
+  .animate{
+    animation: slide-right 0.9s infinite alternate both;
+  }
+}
+
+
+// @-webkit-keyframes slide-right {
+//   0% {
+//     -webkit-transform: translateX(0);
+//             transform: translateX(0);
+//   }
+//   100% {
+//     -webkit-transform: translateX(100px);
+//             transform: translateX(100px);
+//   }
+// }
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+    width: 100%;
+  }
+  100% {
+    transform: translateX(100px);
+    width: 200px !important;
+  }
+}

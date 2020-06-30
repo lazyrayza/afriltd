@@ -9,6 +9,25 @@ class CarmodelsController < ApplicationController
     # @model = Carmodel.find(params[:carmodel_id])
 
   end
+  def edit
+    @makes = Make.all.to_a.map {|make| make }
+
+  end
+
+  def update
+    if @model.update(model_params)
+      respond_to do |format|
+        format.html { redirect_to carmodel_path(@model) }
+        format.js
+      end
+    else
+      respond_to do |format|
+        format.html { render :new }
+        format.js
+      end
+    end
+
+  end
 
 
   def new
@@ -36,10 +55,10 @@ class CarmodelsController < ApplicationController
   private
 
   def find_model
-    @model = Carmodel.where(params[:name]).to_a.first
+    @model ||= Carmodel.find(params[:id])
   end
 
   def model_params
-    params.require(:carmodel).permit(:name, :photo, :year, :available, :make_id, :power, :capacity, :category, :grossvw, :bodytype, :cargolength, :payload )
+    params.require(:carmodel).permit(:name, :photo, :year, :available, :make_id, :power, :capacity, :category, :grossvw, :bodytype, :cargolength, :payload, :fuel )
   end
 end

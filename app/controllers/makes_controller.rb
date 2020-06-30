@@ -6,6 +6,8 @@ class MakesController < ApplicationController
   end
 
   def show
+    @models = Carmodel.where(make_id: @make.id)
+
   end
 
   def new

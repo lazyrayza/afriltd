@@ -32,6 +32,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'cloudinary', '~> 1.12.0'
 gem 'carrierwave', '~> 2.0'
+gem 'pg_search'
 
 
 gem 'autoprefixer-rails'

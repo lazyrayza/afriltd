@@ -31,39 +31,56 @@
       <div class="list-group border-0 text-center text-md-left retail">
         <a href="#menu2" class="list-group-item d-inline-block collapsed show-border" data-toggle="collapse" aria-expanded="false"><i class="fa fa-dashboard"></i> <span class="d-none d-md-inline">RETAIL</span> </a>
         <div class="collapse" id="menu2" data-parent="#sidebar">
-            <a href="#menu2sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">Subitem 1 </a>
+            <a href="#menu2sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false"><i class="fas fa-truck-monster fa-2x"></i>SUVs </a>
             <div class="collapse" id="menu2sub1" data-parent="#menu2">
-              <a href="#" class="list-group-item" data-parent="#menu2sub1">Subitem a</a>
-              <a href="#" class="list-group-item" data-parent="#menu2sub1">Subitem b</a>
-              <a href="#menu2sub1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">Subitem c </a>
+              <a class="list-group-item smaller" data-parent="#menu2sub1" onclick="displayLuxSuv()">Luxury Suv</a>
+              <a class="list-group-item smaller" data-parent="#menu2sub1" onclick="displayCompactSuv()">Compact Suv</a>
             </div>
         </div>
+        <div class="collapse" id="menu2" data-parent="#sidebar">
+            <a href="#menu2sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false"><i class="fas fa-car-side fa-2x"></i>Sedans </a>
+            <div class="collapse" id="menu2sub2" data-parent="#menu2">
+              <a class="list-group-item smaller" data-parent="#menu2sub2" onclick="displayLuxSedan()">Luxury Sedans</a>
+              <a href="#" class="list-group-item smaller" data-parent="#menu2sub2">Sports</a>
+            </div>
+        </div>
+        <div class="collapse" id="menu2" data-parent="#sidebar">
+            <a href="#menu2sub3" class="list-group-item" data-toggle="collapse" aria-expanded="false"><i class="fas fa-truck-pickup fa-2x"></i>Others </a>
+            <div class="collapse" id="menu2sub3" data-parent="#menu2">
+              <a href="#" class="list-group-item smaller" data-parent="#menu2sub3">Pick-up</a>
+              <a href="#" class="list-group-item smaller" data-parent="#menu2sub3">Hatchback</a>
+            </div>
+        </div>
+
       </div>
       <div class="list-group border-0 text-center text-md-left brands">
         <a href="#menu3" class="list-group-item d-inline-block collapsed show-border" data-toggle="collapse" aria-expanded="false"><i class="fa fa-dashboard"></i> <span class="d-none d-md-inline">BRANDS</span> </a>
         <div class="collapse" id="menu3" data-parent="#sidebar">
             <a href="#menu3sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">Eicher <img src="https://res.cloudinary.com/durtng53m/image/upload/v1592390519/Screenshot_2020-06-17_at_14-removebg-preview_2.png" style="width: 40%"></a>
-            <div class="collapse" id="menu3sub1" data-parent="#menu3">
-                <a href="#" class="list-group-item" data-parent="#menu3sub1">Subitem a</a>
-                <a href="#" class="list-group-item" data-parent="#menu3sub1">Subitem b</a>
-                <a href="#menu3sub1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">Subitem c </a>
-            </div>
+            <a href="#menu3sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false">Golden Dragon <img src="https://res.cloudinary.com/durtng53m/image/upload/v1593107217/unnamed__4_-removebg-preview.png" style="width: 20%" ></a>
+            <a href="#menu3sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false">Toyota <img src="https://res.cloudinary.com/durtng53m/image/upload/v1592381014/toyota.png" style="width: 30%" ></a>
+            <a href="#menu3sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false">Land Rover<img src="https://res.cloudinary.com/durtng53m/image/upload/v1592392119/png-land-rover-logo-car-brand-business-land-rover-text-label-trademark-service-clipart-removebg-preview.png" style="width: 40%" ></a>
+            <a href="#menu3sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false"> Mercedes <img src="https://res.cloudinary.com/durtng53m/image/upload/v1592392110/862px-Mercedes-Logo-removebg-preview.png" style="width: 20%" ></a>
+
         </div>
-        <div class="collapse" id="menu3" data-parent="#sidebar">
+        <!-- <div class="collapse" id="menu3" data-parent="#sidebar">
             <a href="#menu3sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false">Golden Dragon <img src="https://res.cloudinary.com/durtng53m/image/upload/v1593107217/unnamed__4_-removebg-preview.png" style="width: 20%" ></a>
             <div class="collapse" id="menu3sub2" data-parent="#menu3">
                 <a href="#" class="list-group-item" data-parent="#menu3sub2">Subitem a</a>
                 <a href="#" class="list-group-item" data-parent="#menu3sub2">Subitem b</a>
                 <a href="#menu3sub2sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false">Subitem c </a>
             </div>
-        </div>
+        </div> -->
       </div>
 
     </div>
   </div>
   <div class="display-box">
-    <div class="normall-display">
-    </div>
+    <!-- <div class="title">
+        <div class="primary-title">
+          <p>Find Your Vehicle</p>
+        </div>
+      </div> -->
 
     <div class="lmd-display major-display" id="lmd" style="display: none">
       <div class="title">
@@ -73,7 +90,7 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @eichers.each do |vehicle| %>
+        <% @vehicles.each do |vehicle| %>
           <% if vehicle.capacity == 'lmd' %>
             <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
@@ -97,7 +114,7 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @eichers.each do |vehicle| %>
+        <% @vehicles.each do |vehicle| %>
           <% if vehicle.capacity == 'hdv' %>
             <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
@@ -122,7 +139,7 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @eichers.each do |vehicle| %>
+        <% @vehicles.each do |vehicle| %>
           <% if vehicle.capacity == 'tipper' %>
             <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
@@ -147,7 +164,7 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @eichers.each do |vehicle| %>
+        <% @vehicles.each do |vehicle| %>
           <% if vehicle.capacity == 'School' %>
             <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
@@ -171,7 +188,7 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @eichers.each do |vehicle| %>
+        <% @vehicles.each do |vehicle| %>
           <% if vehicle.capacity == 'Staff' %>
             <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
@@ -196,7 +213,7 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @eichers.each do |vehicle| %>
+        <% @vehicles.each do |vehicle| %>
           <% if vehicle.capacity == 'City' %>
             <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
@@ -221,7 +238,7 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @gds.each do |vehicle| %>
+        <% @vehicles.each do |vehicle| %>
           <% if vehicle.capacity == 'Coach' %>
             <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
@@ -247,7 +264,7 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @gds.each do |vehicle| %>
+        <% @vehicles.each do |vehicle| %>
           <% if vehicle.capacity == 'Ambulence' %>
             <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
@@ -271,7 +288,7 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @eichers.each do |vehicle| %>
+        <% @vehicles.each do |vehicle| %>
           <% if vehicle.capacity == 'Fire Truck' %>
             <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
@@ -287,6 +304,83 @@
         <%# raise  %>
       </div>
     </div>
+
+    <div class="luxsuv-display major-display" id="luxsuv" style="display: none">
+      <div class="title">
+        <div class="secondary-title">
+          <p>Luxury SUV</p>
+        </div>
+      </div>
+
+      <div class="vehicle-holder">
+        <% @vehicles.each do |vehicle| %>
+          <% if vehicle.capacity == 'Luxury SUV' %>
+            <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
+              <div class="vehicle-title" >
+                <p><%= vehicle.name %></p>
+              </div>
+              <div class="vehicle-photo eicher-truck-photo">
+                <%= cl_image_tag vehicle.photo %>
+              </div>
+           </div>
+           <%= render "shared/show_car_modal", carmodel: vehicle %>
+          <% end  %>
+        <% end  %>
+        <%# raise  %>
+      </div>
+    </div>
+
+    <div class="compactsuv-display major-display" id="compactsuv" style="display: none">
+      <div class="title">
+        <div class="secondary-title">
+          <p>Compact SUV</p>
+        </div>
+      </div>
+
+      <div class="vehicle-holder">
+        <% @vehicles.each do |vehicle| %>
+          <% if vehicle.capacity == 'Compact SUV' %>
+            <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
+              <div class="vehicle-title" >
+                <p><%= vehicle.name %></p>
+              </div>
+              <div class="vehicle-photo eicher-truck-photo">
+                <%= cl_image_tag vehicle.photo %>
+              </div>
+           </div>
+           <%= render "shared/show_car_modal", carmodel: vehicle %>
+          <% end  %>
+        <% end  %>
+        <%# raise  %>
+      </div>
+    </div>
+
+    <div class="luxsedan-display major-display" id="luxsedan" style="display: none">
+      <div class="title">
+        <div class="secondary-title">
+          <p>Luxury Sedan</p>
+        </div>
+      </div>
+
+      <div class="vehicle-holder">
+        <% @vehicles.each do |vehicle| %>
+          <% if vehicle.capacity == 'Luxury Sedan' %>
+            <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
+              <div class="vehicle-title" >
+                <p><%= vehicle.name %></p>
+              </div>
+              <div class="vehicle-photo eicher-truck-photo">
+                <%= cl_image_tag vehicle.photo %>
+              </div>
+           </div>
+           <%= render "shared/show_car_modal", carmodel: vehicle %>
+          <% end  %>
+        <% end  %>
+        <%# raise  %>
+      </div>
+    </div>
+
+
   </div>
 </div>
 
@@ -303,8 +397,11 @@
   var coach = document.getElementById("coachbus");
   var ambulence = document.getElementById("ambulence");
   var firetruck = document.getElementById("firetruck");
+  var luxsuv = document.getElementById("luxsuv");
+  var compactsuv = document.getElementById("compactsuv");
+  var luxsedan = document.getElementById("luxsedan");
 
-
+  console.log(numbers)
   function displayLmd() {
     numbers.forEach(myFunction);
     function myFunction(item) {
@@ -396,6 +493,7 @@
       city.style.display = "block";
     }
   }
+
   function displayCoachBus() {
 
     numbers.forEach(myFunction6);
@@ -411,6 +509,7 @@
       coach.style.display = "block";
     }
   }
+
   function displayAmbulence() {
 
     numbers.forEach(myFunction7);
@@ -440,6 +539,54 @@
       firetruck.style.display = "none";
     } else {
       firetruck.style.display = "block";
+    }
+  }
+
+  function displayLuxSuv() {
+
+    numbers.forEach(myFunction9);
+    function myFunction9(item) {
+      if (item.style.display === "block") {
+        item.style.display = "none";
+      }
+    }
+
+    if (luxsuv.style.display === "block") {
+      luxsuv.style.display = "none";
+    } else {
+      luxsuv.style.display = "block";
+    }
+  }
+
+  function displayCompactSuv() {
+
+    numbers.forEach(myFunction10);
+    function myFunction10(item) {
+      if (item.style.display === "block") {
+        item.style.display = "none";
+      }
+    }
+
+    if (compactsuv.style.display === "block") {
+      compactsuv.style.display = "none";
+    } else {
+      compactsuv.style.display = "block";
+    }
+  }
+
+  function displayLuxSedan() {
+
+    numbers.forEach(myFunction11);
+    function myFunction11(item) {
+      if (item.style.display === "block") {
+        item.style.display = "none";
+      }
+    }
+
+    if (luxsedan.style.display === "block") {
+      luxsedan.style.display = "none";
+    } else {
+      luxsedan.style.display = "block";
     }
   }
 

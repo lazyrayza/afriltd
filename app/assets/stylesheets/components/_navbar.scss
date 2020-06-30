@@ -87,7 +87,7 @@ $yellow: #A76C29;
 }
 
 .navbar-afri-white {
-  background-color: white;
+  background: url('https://res.cloudinary.com/durtng53m/image/upload/v1592223711/8-Stunning-HD-Tesla-Wallpapers-4_4d470f76dc99e18ad75087b1b8410ea9.png');
 
   .nav-item {
     text-decoration: none;
@@ -125,17 +125,20 @@ $yellow: #A76C29;
 
 
 #navbar-two-white {
-  background-color: white;
+  background: url('https://res.cloudinary.com/durtng53m/image/upload/v1593498831/8-Stunning-HD-Tesla-Wallpapers-4_4d470f76dc99e18ad75087b1b8410ea9_1.png');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
   position: sticky;
   display: flex;
   justify-content: space-between;
   padding: 1%;
-  height: 14vh;
+  min-height: 10vh;
   p{
-    color: $blue;
+    color: $white;
   }
   a{
-    color: $blue;
+    color: $white;
   }
 }
 

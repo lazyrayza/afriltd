@@ -58,7 +58,23 @@ $light_yellow: #C2B689;
   }
 }
 
-
+.career-banner{
+  background-image: url("https://res.cloudinary.com/durtng53m/image/upload/v1593500922/Screenshot_2020-06-30_at_11.07.17.png");
+  background-size: cover;
+  height: 85vh;
+  color: #eee;
+  .banner-title{
+    display: flex;
+    justify-content: center;
+    padding: 15%;
+    p{
+      font-size: 5rem;
+      color: $yellow;
+      font-weight: bold;
+      margin-top: 5%;
+    }
+  }
+}
 
 
 
