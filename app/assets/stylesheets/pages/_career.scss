@@ -38,4 +38,60 @@
       font-size: 1.8rem;
     }
   }
+
 }
+.value-description-holder{
+  display: flex;
+  justify-content: center;
+  .value-para{
+    width: 80%;
+    margin: 5%;
+    text-align: justify;
+    font-style: italic;
+  }
+}
+
+
+
+
+.jobs-display{
+  display: flex;
+}
+.jobs-conatiner{
+  display: flex;
+  width: 60%;
+  .jobs-holder{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.jobs-photo-container{
+  width: 40%;
+  display: flex;
+  justify-content: center;
+
+  .jobs-photo{
+    margin: auto;
+    img{
+    border-radius: 0px 0px 50px 0px;
+      width: 80%;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
