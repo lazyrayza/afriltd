@@ -105,6 +105,45 @@ $light_yellow: #C2B689;
   }
 }
 
+
+.selection-box{
+  border: 2px solid $blue;
+  background: url('https://res.cloudinary.com/durtng53m/image/upload/v1593530482/Screenshot_2020-06-30_at_19.20.20.png');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  .department-titles{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    .departemt{
+      color: $white;
+      p{
+        font-size: 2rem;
+        font-weight: bold;
+
+        &:hover{
+          color: $white;
+          cursor: pointer;
+          i{
+            opacity: 1;
+            color: $yellow;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.extra-large-box{
+  min-width: 1200px;
+  max-width: 330px;
+  height: 550px;
+  border-radius: 0px 0px 50px 0px;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .box {

@@ -81,7 +81,10 @@
           <p>Find Your Vehicle</p>
         </div>
       </div> -->
-
+    <!-- <div class="big-title">
+      <p>AFRICARRIERS STOCK</p>
+      <img src="https://res.cloudinary.com/durtng53m/image/upload/v1592226847/3_LOGO-afriltd.png" alt="">
+    </div> -->
     <div class="lmd-display major-display" id="lmd" style="display: none">
       <div class="title">
         <div class="secondary-title">
@@ -92,7 +95,7 @@
       <div class="vehicle-holder">
         <% @vehicles.each do |vehicle| %>
           <% if vehicle.capacity == 'lmd' %>
-            <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
+            <div class=" box vehicle gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
                 <p><%= vehicle.name %></p>
               </div>

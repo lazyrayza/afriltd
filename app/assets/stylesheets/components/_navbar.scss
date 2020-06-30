@@ -88,13 +88,15 @@ $yellow: #A76C29;
 
 .navbar-afri-white {
   background: url('https://res.cloudinary.com/durtng53m/image/upload/v1592223711/8-Stunning-HD-Tesla-Wallpapers-4_4d470f76dc99e18ad75087b1b8410ea9.png');
-
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
   .nav-item {
     text-decoration: none;
     p {
       text-decoration: none;
       margin: 0 0 0 35px;
-      color: gray;
+      color: white;
       cursor: pointer;
     }
   }

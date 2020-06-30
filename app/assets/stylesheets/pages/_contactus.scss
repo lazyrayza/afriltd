@@ -1,0 +1,101 @@
+.deparment-contacts{
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 90%;
+
+}
+
+.department-info{
+  border: 4px solid $blue;
+  justify-content: flex;
+
+}
+
+.department{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: inherit;
+  margin: auto;
+}
+.department-title{
+  text-align: end;
+  p{
+    font-size: 2rem;
+  }
+}
+.employees-holder{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.employee{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 200px;
+}
+
+.employee-headshot{
+  display: flex;
+  justify-content: center;
+  img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.employee-name{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 4px;
+  color: $yellow;
+}
+
+.employee-title{
+  text-align: center;
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.department-contact-holder{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 5%;
+  .info{
+    p{
+      font-size: 20px;
+      color: $dark_grey;
+    }
+    i{
+      font-size: 1.3rem;
+      color: $yellow;
+      margin-right: 4px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 const initUpdateNavbarOnScroll = () => {
-  const navbar = document.querySelector('.main-nav');
+  const navbar = document.querySelector('.navbar-none-white');
   if (navbar) {
     window.addEventListener('scroll', () => {
       if (window.scrollY >= window.innerHeight) {

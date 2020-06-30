@@ -18,6 +18,19 @@
   }
 }
 
+#body-work{
+  background: url('https://res.cloudinary.com/durtng53m/image/upload/v1593522331/pexels-photo-4489707.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+#paint{
+  background: url('https://res.cloudinary.com/durtng53m/image/upload/v1593522259/pexels-photo-4489775.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
 .major-display{
   height: 100%;
   width: 85vw;
@@ -26,7 +39,7 @@
   flex-direction: column;
   justify-content: space-around;
   img{
-    width: 60%;
+    width: 80%;
     margin: auto;
   }
 }
@@ -36,6 +49,15 @@
   flex-wrap: wrap;
   .box{
     margin: 5%;
+    img{
+      transition: ease 1s;
+    }
+    &:hover{
+      cursor: pointer;
+      img{
+        transform: scale(1.2);
+      }
+    }
   }
 }
 
@@ -63,12 +85,30 @@
     min-height: 200px !important;
   }
   .gallery-box-photo img{
-    width: 210px !important;
+    width: 190px !important;
   }
 
 
 }
 
+.big-title{
+  text-align: center;
+  color: $yellow;
+  border: 8px solid $dark_blue;
+  border-top: 0px;
+  border-left: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  p{
+    font-size: 4rem;
+  }
+  img{
+    width: 10%;
+    height: 100%;
+  }
+
+}
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 767px) and (min-width: 576px) {
 

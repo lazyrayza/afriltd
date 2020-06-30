@@ -60,7 +60,8 @@ $light_yellow: #C2B689;
       border-top: 1px solid white;
       border-bottom: 1px solid white;
       padding-top: 35px;
-    padding-bottom: 5px;
+      padding-bottom: 5px;
+
     }
     .list-title{
       font-size: 1.2rem;
@@ -78,6 +79,11 @@ $light_yellow: #C2B689;
       padding-left: 0;
       font-size: 14px;
       line-height: 2rem;
+    }
+
+    a{
+      text-decoration: none;
+      color: $white
     }
 
     .socials-list{
