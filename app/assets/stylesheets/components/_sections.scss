@@ -28,9 +28,22 @@
 
 }
 
+.values-section{
+  background: $white;
+}
+
 .jobs-section{
   height: 80vh;
   margin: 2%;
+  background-color: #F4F4F4;
+}
+
+.form-section{
+  height: 90vh;
+  background-image: url('https://res.cloudinary.com/durtng53m/image/upload/v1592374147/worldmapdotted1.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize th */
 }
 
 // Smallest device
@@ -55,6 +68,13 @@
   .contact-section{
     height: 150vh;
   }
+
+  .jobs-section {
+    height: 130vh;
+  }
+  .form-section {
+    height: 130vh;
+  }
 }
 
 
@@ -73,6 +93,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+  }
+
+  .jobs-section{
+    height: 90vh;
+  }
+  .form-section {
+    height: 60vh;
   }
 
 }
@@ -99,5 +126,9 @@
   .locations-section{
     height: 65vh;
 
+  }
+
+  .form-section {
+    height: 50vh;
   }
 }

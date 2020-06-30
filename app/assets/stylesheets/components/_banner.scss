@@ -103,6 +103,11 @@ $light_yellow: #C2B689;
   .direction{
     margin: 6%;
   }
+
+  .career-banner .banner-title {
+      padding: 20%;
+      padding-top: 40%;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -113,6 +118,8 @@ $light_yellow: #C2B689;
       font-size: 1.8rem;
     }
   }
+
+
 }
 
 
@@ -138,7 +145,13 @@ $light_yellow: #C2B689;
       /* margin: 5%; */
       padding: 5%;
     }
-
+  }
+  .career-banner {
+    width: 102vw;
+    .banner-title {
+      padding: 10%;
+      padding-top: 40%;
+    }
   }
 }
 
@@ -165,5 +178,11 @@ $light_yellow: #C2B689;
     }
 
   }
+
+  .career-banner .banner-title {
+    padding: 15%;
+    padding-top: 60%;
+  }
+
 }
 
