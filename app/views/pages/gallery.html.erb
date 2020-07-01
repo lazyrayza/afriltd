@@ -143,7 +143,7 @@
 
       <div class="vehicle-holder">
         <% @vehicles.each do |vehicle| %>
-          <% if vehicle.capacity == 'tipper' %>
+          <% if vehicle.capacity == 'Tipper' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
                 <p><%= vehicle.name %></p>
