@@ -582,7 +582,7 @@ fjcruiser = Carmodel.new(
   body_type: 'Heritage Edition',
   payload: '5 Seater' ,
   available: 'true',
-  fuel: 'Petrol'
+  fuel: 'Petrol',
   make: toyota,
   )
 fjcruiser.remote_photo_url = 'https://res.cloudinary.com/durtng53m/image/upload/v1589446260/1861_1_fj_cruiser_toyota_fj_cruiser_angled_side_door_racing_decals_stripes_graphics__1-removebg-preview.png'
