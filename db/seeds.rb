@@ -600,7 +600,7 @@ rrrevoque = Carmodel.new(
   body_type: 'Evoque Edition',
   payload: '5 Seater' ,
   available: 'true',
-  fuel: 'Petrol'
+  fuel: 'Petrol',
   make: lrover,
   )
 rrrevoque.remote_photo_url = 'https://res.cloudinary.com/durtng53m/image/upload/v1592131834/712fIlvhJSL-removebg-preview.png'
@@ -618,7 +618,7 @@ rrsports = Carmodel.new(
   body_type: 'Sports Edition',
   payload: '5 Seater' ,
   available: 'true',
-  fuel: 'Petrol'
+  fuel: 'Petrol',
   make: lrover,
   )
 rrsports.remote_photo_url = 'https://res.cloudinary.com/durtng53m/image/upload/v1593528301/glgbyjvgiq1rzzltqpto.png'
@@ -638,7 +638,7 @@ rangerover = Carmodel.new(
   body_type: 'Range Rover Edition',
   payload: '5 Seater' ,
   available: 'true',
-  fuel: 'Petrol'
+  fuel: 'Petrol',
   make: lrover,
   )
 rangerover.remote_photo_url = 'https://res.cloudinary.com/durtng53m/image/upload/v1593607995/2020_land-rover_range-rover_4dr-suv_p525-autobiography_fq_oem_1_500-removebg-preview.png'
@@ -658,7 +658,7 @@ vezelsports = Carmodel.new(
   body_type: 'Sports Edition',
   payload: '5 Seater' ,
   available: 'true',
-  fuel: 'Petrol'
+  fuel: 'Petrol',
   make: honda,
   )
 vezelsports.remote_photo_url = 'https://res.cloudinary.com/durtng53m/image/upload/v1593527026/if47o5brykqsw55qhrku.png'
@@ -677,7 +677,7 @@ rangerover = Carmodel.new(
   body_type: 'Hyrbid Edition',
   payload: '5 Seater' ,
   available: 'true',
-  fuel: 'Hyrbid'
+  fuel: 'Hyrbid',
   make: honda,
   )
 rangerover.remote_photo_url = 'https://res.cloudinary.com/durtng53m/image/upload/v1593608211/01-removebg-preview.png'
