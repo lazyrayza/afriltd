@@ -3,7 +3,7 @@ import Typed from 'typed.js';
 const loadDynamicBannerText = () => {
   new Typed('#banner-typed-text', {
     strings: ["WE MOVE AFRICA"],
-    typeSpeed: 100,
+    typeSpeed: 200,
     loop: true
   });
 }

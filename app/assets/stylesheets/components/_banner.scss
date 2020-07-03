@@ -13,12 +13,12 @@ $light_yellow: #C2B689;
 .banner{
    background-image: url("https://res.cloudinary.com/durtng53m/image/upload/v1592223711/8-Stunning-HD-Tesla-Wallpapers-4_4d470f76dc99e18ad75087b1b8410ea9.png");
   background-size: cover;
-  height: 90vh;
+  height: 100%;
   color: #eee;
   .tag-line{
   display: flex;
   justify-content: center;
-  padding: 15%;
+  padding: 17%;
   p{
     font-size: 3rem;
   }
@@ -61,7 +61,7 @@ $light_yellow: #C2B689;
 .career-banner{
   background-image: url("https://res.cloudinary.com/durtng53m/image/upload/v1593500922/Screenshot_2020-06-30_at_11.07.17.png");
   background-size: cover;
-  height: 85vh;
+  height:100%;
   color: #eee;
   .banner-title{
     display: flex;
@@ -81,7 +81,7 @@ $light_yellow: #C2B689;
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .banner{
-    height: 100vh;
+    height: 100%;
    .tag-line {
     padding: 10%;
     padding-top: 60%;
@@ -113,7 +113,7 @@ $light_yellow: #C2B689;
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 767px) and (min-width: 576px) {
   .banner{
-    height: 100vh;
+    height: 100%;
    .tag-line p {
       font-size: 1.8rem;
     }
@@ -127,7 +127,7 @@ $light_yellow: #C2B689;
 @media (max-width: 992px) and(min-width: 768px) {
   .banner{
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     color: #eee;
     width: 100vw;
     display: flex;
@@ -137,7 +137,7 @@ $light_yellow: #C2B689;
       display: flex;
       justify-content: center;
       padding: 20%;
-      margin-top: 35%;
+      padding-top: 61%;
     }
     .content-information {
       display: flex;
@@ -159,7 +159,7 @@ $light_yellow: #C2B689;
 @media (max-width: 1200px) and (min-width: 992px) {
   .banner{
     background-size: cover;
-    height: 98vh;
+    height:100%;
     color: #eee;
     width: 100vw;
     display: flex;
@@ -169,6 +169,7 @@ $light_yellow: #C2B689;
       display: flex;
       justify-content: center;
       padding: 25%;
+      padding-top: 67%;
     }
     .content-information {
       display: flex;

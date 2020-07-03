@@ -35,13 +35,7 @@ $soft_yellow: #CFAE89;
 $red: #7D1710;
 $yellow: #A76C29;
 
-.grey p{
-  color: $dark_grey !important;
-}
 
-.grey a{
-  color: $dark_grey !important;
-}
 .navbar-afri{
   background-color: transparent;
   transition: 0.5s background-color ease;
@@ -96,7 +90,7 @@ $yellow: #A76C29;
     p {
       text-decoration: none;
       margin: 0 0 0 35px;
-      color: white;
+      color: $white;
       cursor: pointer;
     }
   }
@@ -111,7 +105,7 @@ $yellow: #A76C29;
   p {
     text-decoration: none;
     margin: 0 0 0 35px;
-    color: white;
+    color: $white;
   }
 }
 

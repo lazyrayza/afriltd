@@ -97,7 +97,13 @@
           <% if vehicle.capacity == 'lmd' %>
             <div class=" box vehicle gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %></p>
+                <p><%= vehicle.name %>
+                  <% if vehicle.available == true %>
+                    <i class="fas fa-check-circle green" title="Available"></i>
+                  <% else %>
+                    <i class="far fa-times-circle red" title="Out of stock"></i>
+                  <% end  %>
+                </p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -121,7 +127,11 @@
           <% if vehicle.capacity == 'hdv' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %></p>
+                <p><%= vehicle.name %><% if vehicle.available == true %>
+                    <i class="fas fa-check-circle green" title="Available"></i>
+                  <% else %>
+                    <i class="far fa-times-circle red" title="Out of stock"></i>
+                  <% end  %></p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -146,7 +156,11 @@
           <% if vehicle.capacity == 'Tipper' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %></p>
+                <p><%= vehicle.name %><% if vehicle.available == true %>
+                    <i class="fas fa-check-circle green" title="Available"></i>
+                  <% else %>
+                    <i class="far fa-times-circle red" title="Out of stock"></i>
+                  <% end  %></p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -171,7 +185,11 @@
           <% if vehicle.capacity == 'School' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %></p>
+                <p><%= vehicle.name %><% if vehicle.available == true %>
+                    <i class="fas fa-check-circle green" title="Available"></i>
+                  <% else %>
+                    <i class="far fa-times-circle red" title="Out of stock"></i>
+                  <% end  %></p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -195,7 +213,11 @@
           <% if vehicle.capacity == 'Staff' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %></p>
+                <p><%= vehicle.name %><% if vehicle.available == true %>
+                    <i class="fas fa-check-circle green" title="Available"></i>
+                  <% else %>
+                    <i class="far fa-times-circle red" title="Out of stock"></i>
+                  <% end  %></p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -220,7 +242,11 @@
           <% if vehicle.capacity == 'City' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %></p>
+                <p><%= vehicle.name %><% if vehicle.available == true %>
+                    <i class="fas fa-check-circle green" title="Available"></i>
+                  <% else %>
+                    <i class="far fa-times-circle red" title="Out of stock"></i>
+                  <% end  %></p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -245,7 +271,11 @@
           <% if vehicle.capacity == 'Coach' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %></p>
+                <p><%= vehicle.name %><% if vehicle.available == true %>
+                    <i class="fas fa-check-circle green" title="Available"></i>
+                  <% else %>
+                    <i class="far fa-times-circle red" title="Out of stock"></i>
+                  <% end  %></p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -271,7 +301,11 @@
           <% if vehicle.capacity == 'Ambulence' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %></p>
+                <p><%= vehicle.name %><% if vehicle.available == true %>
+                    <i class="fas fa-check-circle green" title="Available"></i>
+                  <% else %>
+                    <i class="far fa-times-circle red" title="Out of stock"></i>
+                  <% end  %></p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -295,7 +329,11 @@
           <% if vehicle.capacity == 'Fire Truck' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %></p>
+                <p><%= vehicle.name %><% if vehicle.available == true %>
+                    <i class="fas fa-check-circle green" title="Available"></i>
+                  <% else %>
+                    <i class="far fa-times-circle red" title="Out of stock"></i>
+                  <% end  %></p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -320,7 +358,11 @@
           <% if vehicle.capacity == 'Luxury SUV' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %></p>
+                <p><%= vehicle.name %><% if vehicle.available == true %>
+                    <i class="fas fa-check-circle green" title="Available"></i>
+                  <% else %>
+                    <i class="far fa-times-circle red" title="Out of stock"></i>
+                  <% end  %></p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -345,7 +387,11 @@
           <% if vehicle.capacity == 'Compact SUV' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %></p>
+                <p><%= vehicle.name %><% if vehicle.available == true %>
+                    <i class="fas fa-check-circle green" title="Available"></i>
+                  <% else %>
+                    <i class="far fa-times-circle red" title="Out of stock"></i>
+                  <% end  %></p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -370,7 +416,11 @@
           <% if vehicle.capacity == 'Luxury Sedan' %>
             <div class=" box vehicle page-box gallery-box " data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %></p>
+                <p><%= vehicle.name %><% if vehicle.available == true %>
+                    <i class="fas fa-check-circle green" title="Available"></i>
+                  <% else %>
+                    <i class="far fa-times-circle red" title="Out of stock"></i>
+                  <% end  %></p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>

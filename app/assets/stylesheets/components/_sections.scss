@@ -1,5 +1,9 @@
+.product-category{
+  height: 100%;
+}
+
 .services-section{
-  height: 100vh;
+  height: 100%;
   background: #F2F2F2;
   display: flex;
     flex-direction: column;
@@ -7,14 +11,14 @@
 }
 .history-section{
   background: $white;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
 .locations-section{
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -26,6 +30,7 @@
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize th */
   margin-top: 7%;
+  height: 100%;
 
 }
 
@@ -34,13 +39,13 @@
 }
 
 .jobs-section{
-  height: 80vh;
+  height: 100%;
   margin: 2%;
   background-color: #F4F4F4;
 }
 
 .form-section{
-  height: 90vh;
+  height: 100%;
   background-image: url('https://res.cloudinary.com/durtng53m/image/upload/v1592374147/worldmapdotted1.jpg');
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -121,7 +126,7 @@
 @media (max-width: 1200px) and (min-width: 992px) {
 
   .services-section {
-    height: 65vh;
+    height: 100%;
     background: #F2F2F2;
     display: flex;
     flex-direction: column;
@@ -130,14 +135,14 @@
 
 
   .history-section {
-    height: 65vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
 
   .locations-section{
-    height: 65vh;
+    height: 100%;
 
   }
 

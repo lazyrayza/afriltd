@@ -51,6 +51,7 @@ $light_yellow: #C2B689;
       img{
         width: 80%;
         margin: auto;
+        height: 100%;
       }
     }
 
@@ -107,9 +108,9 @@ $light_yellow: #C2B689;
           svg{
           height: 30px;
           width: 30px;
-          fill: #08538A;
+          fill: $white;
             &:hover{
-              fill: $light_blue;
+              fill: $light_yellow;
               // box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.62);
 
             }
@@ -123,8 +124,14 @@ $light_yellow: #C2B689;
       color: $white;
       width: 90%;
       margin: auto;
+      justify-content: space-around;
+      a{
+        text-decoration: none;
+        color: white;
+      }
     }
 }
+
 
 
 // Smallest device
@@ -189,6 +196,7 @@ $light_yellow: #C2B689;
 
   .footer-container .footer-nav .footer-logo img {
     width: 130%;
+    height: 100%;
   }
 }
 
