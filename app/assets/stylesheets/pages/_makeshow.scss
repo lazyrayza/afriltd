@@ -21,3 +21,12 @@
 .eicher-truck-photo img{
   width: 80%;
 }
+
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .make-container {
+    margin-top: 33%;
+  }
+}

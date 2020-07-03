@@ -53,6 +53,7 @@ $yellow: #A76C29;
       margin: 0 0 0 35px;
       color: $white;
       cursor: pointer;
+      background-color: transparent;
     }
   }
 
@@ -111,6 +112,8 @@ $yellow: #A76C29;
 
 .nav-main-items {
   margin-top: 3px;
+    background-color: transparent;
+
   li {
     display: inline-block;
     i{
@@ -118,6 +121,11 @@ $yellow: #A76C29;
     }
   }
 }
+
+.dropdown{
+  background-color: transparent;
+}
+
 
 
 #navbar-two-white {
