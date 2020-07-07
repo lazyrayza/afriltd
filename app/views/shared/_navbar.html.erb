@@ -38,14 +38,10 @@
             <% if user_signed_in? %>
               <li class="nav-item dropdown">
                   <%= link_to "Dashboard", dashboard_path, class: "dropdown-item" %>
-                  <%= link_to "Another action", "#", class: "dropdown-item" %>
+                  <%= link_to "Edit account", edit_user_registration_path(current_user)  %>
                   <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
 
 
-              </li>
-            <% else %>
-              <li class="nav-item">
-                <%= link_to "Login", new_user_session_path, class: "nav-link" %>
               </li>
             <% end %>
           </div>

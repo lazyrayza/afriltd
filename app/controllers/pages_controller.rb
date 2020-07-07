@@ -6,7 +6,8 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-
+    @commercial = Classification.where(name: "Commercial")
+    @retail = Classification.where(name: "Retail")
   end
 
 

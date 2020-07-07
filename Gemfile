@@ -43,6 +43,7 @@ gem 'ahoy_matey'
 gem "chartkick"
 gem 'groupdate'
 gem 'devise'
+gem 'blazer'
 
 
 group :development, :test do
