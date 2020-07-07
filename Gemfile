@@ -40,8 +40,8 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'ahoy_matey'
-gem "chartkick"
-gem 'groupdate'
+gem 'chartkick', '~> 3.0', '>= 3.0.1'
+gem 'groupdate', '~> 4.1'
 gem 'devise'
 gem 'blazer'
 

@@ -42,7 +42,12 @@
                   <p>Body Type: <%= carmodel.bodytype %></p>
                 </div>
                 <div class="vehicle-info">
-                  <p>Cargo length: <%= carmodel.cargolength %> feet</p>
+                  <% if carmodel.cargolength? %>
+                    <p>Cargo length: <%= carmodel.cargolength %> feet</p>
+                  <% else %>
+                    <p>Cargo length: N/A</p>
+                  <% end %>
+
                 </div>
                 <div class="vehicle-info">
                   <p>Payload: <%= carmodel.payload %> Tons</p>
@@ -61,7 +66,7 @@
                   <p>Seats: <%= carmodel.seats %></p>
                 </div>
                 <div class="vehicle-info">
-                  <p>Mileage<%= carmodel.mileage %></p>
+                  <p>Mileage: <%= carmodel.mileage %></p>
                 </div>
 
               </div>
@@ -84,6 +89,10 @@
                 <div class="make-info">
                   <p>Spare Available: Full Stock</p>
                 </div>
+              </div>
+              <div class="users-check">
+                <% arr = [0..15] %>
+                <p><%= rand(1..15) %> people have viewed this vehicle today!</p>
               </div>
               <div class="request-quote">
                 <div class="request-btn">

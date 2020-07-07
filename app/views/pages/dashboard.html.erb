@@ -184,57 +184,86 @@
 
       </div>
 
-      <div class="dashboard-items">
-        <div class="dash-item1 blue">
-          <div class="item-icon ">
-            <i class="fas fa-laptop"></i>
-          </div>
-          <div class="item-info">
-            <div class="item-number">
-              <p> <%= Ahoy::Visit.all.count %> </p>
+      <% if current_user.admin == true %>
+        <div class="dashboard-admin-items ">
+          <div class="website-items">
+            <div class="dash-item1 blue">
+              <div class="item-icon ">
+                <i class="fas fa-laptop"></i>
+              </div>
+              <div class="item-info">
+                <div class="item-number">
+                  <p> <%= Ahoy::Visit.all.count %> </p>
+                </div>
+                <div class="item-content">
+                  <p>Website Visits</p>
+                </div>
+              </div>
             </div>
-            <div class="item-content">
-              <p>Website Visits</p>
+            <div class="dash-item1 yellow">
+              <div class="item-icon">
+                <i class="fas fa-mouse"></i>
+              </div>
+              <div class="item-info">
+                <div class="item-number">
+                  <p> <%= Ahoy::Event.all.count %> </p>
+                </div>
+                <div class="item-content">
+                  <p>Website Clicks</p>
+                </div>
+              </div>
+            </div>
+           </div>
+          <div class="dash-graphs">
+            <div class="dash-item-graph">
+              <div class="table-title">
+                <p>Devise Access</p>
+              </div>
+              <div class="item-info">
+                <div class="item-chart">
+                  <%= pie_chart Ahoy::Visit.group(:device_type).count,  colors: ["#274972", "#AB964B"] %>
+                </div>
+              </div>
+            </div>
+            <div class="dash-item-graph">
+              <div class="table-title">
+                <p>Referring Domain</p>
+              </div>
+              <div class="item-info">
+                <div class="item-chart">
+                  <%= pie_chart Ahoy::Visit.group(:referring_domain ).count,  colors: ["#274972", "#AB964B"] %>
+                </div>
+              </div>
+            </div>
+            <div class="dash-item-graph">
+              <div class="table-title">
+                <p>Visit By City</p>
+              </div>
+              <div class="item-info">
+                <div class="item-chart">
+                  <%= pie_chart Ahoy::Visit.group(:city).count,  colors: ["#274972", "#AB964B"] %>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="dash-item1 yellow">
-          <div class="item-icon">
-            <i class="fas fa-mouse"></i>
-          </div>
-          <div class="item-info">
-            <div class="item-number">
-              <p> <%= Ahoy::Event.all.count %> </p>
-            </div>
-            <div class="item-content">
-              <p>Website Clicks</p>
-            </div>
-          </div>
-        </div>
 
-      </div>
+          <div class="dash-graphs-large">
+            <div class="dash-item-graph" style="width: 100%">
+              <div class="table-title">
+                <p>Visits Per/Day</p>
+              </div>
+              <div class="item-info">
+                <div class="item-chart">
+                  <%= line_chart Ahoy::Visit.group_by_day(:started_at).count %>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
 
     </div>
-
-    <div class="dashboard-items">
-<!--       <div class="dash-item2 list">
-        <div class="item-icon">
-          <i class="fas fa-mouse"></i>
-        </div>
-        <div class="item-info">
-          <div class="item-number">
-            <p> <%# Ahoy::Event.where_props(carmodel_id: 55).count %> </p>
-          </div>
-          <div class="item-content">
-            <p>Website Clicks</p>
-          </div>
-        </div>
-        </div> -->
-      <div class="dash-graph">
-        <%# line_chart Ahoy::Visit.group_by_day(:started_at).count %>
-      </div>
-    </div>
-
   </div>
-
 </div>
