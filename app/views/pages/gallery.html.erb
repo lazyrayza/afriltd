@@ -93,17 +93,19 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @vehicles.each do |vehicle| %>
-          <% if vehicle.capacity == 'lmd' %>
+        <% Carmodel.all.to_a.each do |vehicle| %>
+          <% if vehicle.subcategory.name == 'Light & Medium Duty' %>
             <div class=" box vehicle gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %>
-                  <% if vehicle.available == true %>
-                    <i class="fas fa-check-circle green" title="Available"></i>
-                  <% else %>
-                    <i class="far fa-times-circle red" title="Out of stock"></i>
-                  <% end  %>
-                </p>
+                <%= link_to carmodel_path(vehicle) do %>
+                  <p><%= vehicle.name %>
+                <% end %>
+                    <% if vehicle.available == true %>
+                      <i class="fas fa-check-circle green" title="Available"></i>
+                    <% else %>
+                      <i class="far fa-times-circle red" title="Out of stock"></i>
+                    <% end  %>
+                  </p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -123,15 +125,19 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @vehicles.each do |vehicle| %>
-          <% if vehicle.capacity == 'hdv' %>
+        <% Carmodel.where(subcategory: @hdv ).to_a.each do |vehicle| %>
+          <% if vehicle.subcategory.name == 'Heavy Duty' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %><% if vehicle.available == true %>
+                <%= link_to carmodel_path(vehicle) do %>
+                  <p><%= vehicle.name %>
+                <% end %>
+                  <% if vehicle.available == true %>
                     <i class="fas fa-check-circle green" title="Available"></i>
                   <% else %>
                     <i class="far fa-times-circle red" title="Out of stock"></i>
-                  <% end  %></p>
+                  <% end  %>
+                </p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -152,15 +158,19 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @vehicles.each do |vehicle| %>
-          <% if vehicle.capacity == 'Tipper' %>
+        <% Carmodel.where(subcategory: @tipper ).to_a.each do |vehicle| %>
+          <% if vehicle.subcategory.name == 'Tipper' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %><% if vehicle.available == true %>
+                <%= link_to carmodel_path(vehicle) do %>
+                  <p><%= vehicle.name %>
+                <% end %>
+                  <% if vehicle.available == true %>
                     <i class="fas fa-check-circle green" title="Available"></i>
                   <% else %>
                     <i class="far fa-times-circle red" title="Out of stock"></i>
-                  <% end  %></p>
+                  <% end  %>
+                </p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -181,15 +191,19 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @vehicles.each do |vehicle| %>
-          <% if vehicle.capacity == 'School' %>
+        <% Carmodel.all.to_a.each do |vehicle| %>
+          <% if vehicle.subcategory.name == 'School' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %><% if vehicle.available == true %>
+                <%= link_to carmodel_path(vehicle) do %>
+                  <p><%= vehicle.name %>
+                <% end %>
+                  <% if vehicle.available == true %>
                     <i class="fas fa-check-circle green" title="Available"></i>
                   <% else %>
                     <i class="far fa-times-circle red" title="Out of stock"></i>
-                  <% end  %></p>
+                  <% end  %>
+                </p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -209,15 +223,19 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @vehicles.each do |vehicle| %>
-          <% if vehicle.capacity == 'Staff' %>
+        <% Carmodel.all.to_a.each do |vehicle| %>
+          <% if vehicle.subcategory.name == 'Staff' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %><% if vehicle.available == true %>
+                <%= link_to carmodel_path(vehicle) do %>
+                  <p><%= vehicle.name %>
+                <% end %>
+                  <% if vehicle.available == true %>
                     <i class="fas fa-check-circle green" title="Available"></i>
                   <% else %>
                     <i class="far fa-times-circle red" title="Out of stock"></i>
-                  <% end  %></p>
+                  <% end  %>
+                </p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -238,15 +256,19 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @vehicles.each do |vehicle| %>
-          <% if vehicle.capacity == 'City' %>
+        <% Carmodel.all.to_a.each do |vehicle| %>
+          <% if vehicle.subcategory.name == 'City' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %><% if vehicle.available == true %>
+                <%= link_to carmodel_path(vehicle) do %>
+                  <p><%= vehicle.name %>
+                <% end %>
+                  <% if vehicle.available == true %>
                     <i class="fas fa-check-circle green" title="Available"></i>
                   <% else %>
                     <i class="far fa-times-circle red" title="Out of stock"></i>
-                  <% end  %></p>
+                  <% end  %>
+                </p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -267,15 +289,19 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @vehicles.each do |vehicle| %>
-          <% if vehicle.capacity == 'Coach' %>
+        <% Carmodel.all.to_a.each do |vehicle| %>
+          <% if vehicle.subcategory.name == 'Coach' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %><% if vehicle.available == true %>
+                <%= link_to carmodel_path(vehicle) do %>
+                  <p><%= vehicle.name %>
+                <% end %>
+                  <% if vehicle.available == true %>
                     <i class="fas fa-check-circle green" title="Available"></i>
                   <% else %>
                     <i class="far fa-times-circle red" title="Out of stock"></i>
-                  <% end  %></p>
+                  <% end  %>
+                </p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -297,15 +323,19 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @vehicles.each do |vehicle| %>
-          <% if vehicle.capacity == 'Ambulence' %>
+        <% Carmodel.all.to_a.each do |vehicle| %>
+          <% if vehicle.subcategory.name == 'Medical' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %><% if vehicle.available == true %>
+                <%= link_to carmodel_path(vehicle) do %>
+                  <p><%= vehicle.name %>
+                <% end %>
+                  <% if vehicle.available == true %>
                     <i class="fas fa-check-circle green" title="Available"></i>
                   <% else %>
                     <i class="far fa-times-circle red" title="Out of stock"></i>
-                  <% end  %></p>
+                  <% end  %>
+                </p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -325,15 +355,19 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @vehicles.each do |vehicle| %>
-          <% if vehicle.capacity == 'Fire Truck' %>
+        <% Carmodel.all.to_a.each do |vehicle| %>
+          <% if vehicle.subcategory.name == 'Fire Truck' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %><% if vehicle.available == true %>
+                <%= link_to carmodel_path(vehicle) do %>
+                  <p><%= vehicle.name %>
+                <% end %>
+                  <% if vehicle.available == true %>
                     <i class="fas fa-check-circle green" title="Available"></i>
                   <% else %>
                     <i class="far fa-times-circle red" title="Out of stock"></i>
-                  <% end  %></p>
+                  <% end  %>
+                </p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -354,15 +388,19 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @vehicles.each do |vehicle| %>
-          <% if vehicle.capacity == 'Luxury SUV' %>
+        <% Carmodel.all.to_a.each do |vehicle| %>
+          <% if vehicle.subcategory.name == 'Luxury SUV' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %><% if vehicle.available == true %>
+                <%= link_to carmodel_path(vehicle) do %>
+                  <p><%= vehicle.name %>
+                <% end %>
+                  <% if vehicle.available == true %>
                     <i class="fas fa-check-circle green" title="Available"></i>
                   <% else %>
                     <i class="far fa-times-circle red" title="Out of stock"></i>
-                  <% end  %></p>
+                  <% end  %>
+                </p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -383,15 +421,19 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @vehicles.each do |vehicle| %>
-          <% if vehicle.capacity == 'Compact SUV' %>
+        <% Carmodel.all.to_a.each do |vehicle| %>
+          <% if vehicle.subcategory.name == 'Compact SUV' %>
             <div class=" box vehicle page-box gallery-box" data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %><% if vehicle.available == true %>
+                <%= link_to carmodel_path(vehicle) do %>
+                  <p><%= vehicle.name %>
+                <% end %>
+                  <% if vehicle.available == true %>
                     <i class="fas fa-check-circle green" title="Available"></i>
                   <% else %>
                     <i class="far fa-times-circle red" title="Out of stock"></i>
-                  <% end  %></p>
+                  <% end  %>
+                </p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>
@@ -412,15 +454,19 @@
       </div>
 
       <div class="vehicle-holder">
-        <% @vehicles.each do |vehicle| %>
-          <% if vehicle.capacity == 'Luxury Sedan' %>
+        <% Carmodel.all.to_a.each do |vehicle| %>
+          <% if vehicle.subcategory.name == 'Luxury Sedan' %>
             <div class=" box vehicle page-box gallery-box " data-toggle="modal" data-target="#myModal_<%= vehicle.id %>">
               <div class="vehicle-title" >
-                <p><%= vehicle.name %><% if vehicle.available == true %>
+                <%= link_to carmodel_path(vehicle) do %>
+                  <p><%= vehicle.name %>
+                <% end %>
+                  <% if vehicle.available == true %>
                     <i class="fas fa-check-circle green" title="Available"></i>
                   <% else %>
                     <i class="far fa-times-circle red" title="Out of stock"></i>
-                  <% end  %></p>
+                  <% end  %>
+                </p>
               </div>
               <div class="vehicle-photo gallery-box-photo">
                 <%= cl_image_tag vehicle.photo %>

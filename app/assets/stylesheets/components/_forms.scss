@@ -1,0 +1,125 @@
+.container-booking{
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  margin-top: 7%;
+  padding: 5%;
+}
+
+.booking-box{
+  margin: auto;
+  width: 90%;
+  border: 3px solid $blue;
+  padding: 5%;
+  box-shadow: -9px 10px 47px 0px rgba(0,0,0,0.53);
+
+}
+
+.error-messages{
+  color: red;
+  font-size: 1.5rem;
+}
+
+.form-breaker{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.form-title{
+  font-size: 1.4rem;
+  color: $blue;
+  font-weight: bold;
+  p{
+    border-bottom: 2px solid $blue;
+  }
+}
+input[type='text'], .contact-form [type='email'], .contact-form select, .contact-form textarea {
+    background: none;
+    border: none;
+    border-bottom: solid 2px #474544;
+    color: #474544;
+    font-size: 1.000em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+
+input[type="checkbox"] {
+  position: relative;
+  -webkit-appearance: none;
+  height: 2em;
+  width: 4em;
+  border-radius: 1.5em;
+  background-color: #E2E5E5;
+  border-color: transparent;
+  background-clip: padding-box;
+  color: #919FAF;
+  vertical-align: middle;
+}
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 50%;
+  background-color: white;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-clip: padding-box;
+  z-index: 2;
+}
+input[type="checkbox"]::after {
+  position: absolute;
+  left: 0.675em;
+  top: 0.375em;
+  // font-family: "Ionicons";
+  content: "Y";
+  letter-spacing: 0.75em;
+  z-index: 1;
+}
+input[type="checkbox"]:focus {
+  color: white;
+  border-color: transparent;
+  background-color: #919FAF;
+}
+input[type="checkbox"]:checked {
+  color: white;
+  background-color: #1ABC9C;
+  border-color: transparent;
+}
+input[type="checkbox"]:checked::before {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.form-button{
+  background-color: $yellow;
+  color: $white;
+  border-radius: 25px;
+
+}
+
+
+
+.form-check{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+
+
+.login-container{
+  margin: 12%;
+  background-color: $white;
+  border: 3px solid $blue;
+  box-shadow: -9px 10px 47px 0px rgba(0,0,0,0.53);
+  padding: 5%;
+}

@@ -33,11 +33,17 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'cloudinary', '~> 1.12.0'
 gem 'carrierwave', '~> 2.0'
 gem 'pg_search'
+# gem 'simple_form_autocomplete'
 
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem 'ahoy_matey'
+gem "chartkick"
+gem 'groupdate'
+gem 'devise'
+
 
 group :development, :test do
   gem 'pry-byebug'

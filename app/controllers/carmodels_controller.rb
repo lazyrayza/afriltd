@@ -17,7 +17,7 @@ class CarmodelsController < ApplicationController
   def update
     if @model.update(model_params)
       respond_to do |format|
-        format.html { redirect_to carmodel_path(@model) }
+        format.html { redirect_to carmodel_path(@model), notice: 'Model has been Updated' }
         format.js
       end
     else
@@ -48,7 +48,6 @@ class CarmodelsController < ApplicationController
         format.js
       end
     end
-
   end
 
 
@@ -59,6 +58,6 @@ class CarmodelsController < ApplicationController
   end
 
   def model_params
-    params.require(:carmodel).permit(:name, :photo, :year, :available, :make_id, :power, :capacity, :category, :grossvw, :bodytype, :cargolength, :payload, :fuel, :year )
+    params.require(:carmodel).permit(:name, :classification_id, :subcategory_id, :make_id, :fuel_id, :year, :power, :bodytype, :cargolength, :seats, :payload, :grossvw, :duty, :notes, :available, :new,  :photo )
   end
 end

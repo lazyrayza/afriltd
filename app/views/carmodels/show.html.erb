@@ -1,7 +1,7 @@
 <div class="make-container" >
   <div class="title">
       <div class="secondary-title">
-        <p> <%= Make.find(@model.make.id).name %> - <%= @model.name %>, <%= @model.capacity %> <%= @model.category %> </p>
+        <p> <%= Make.find(@model.make.id).name %> - <%= @model.name %>, <%= @model.subcategory.category.name %> <%= @model.subcategory.name %> </p>
       </div>
     </div>
 

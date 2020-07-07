@@ -1,77 +1,117 @@
-<style>
-  .container-booking{
-    height: 180vh;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .booking-box{
-    margin: auto;
-  }
-</style>
-
 
 
 <div class="container-booking" >
+  <%= link_to dashboard_path, class: "secondary-button" do %>
+    <i class="fas fa-hand-point-left fa-3x"></i>
+  <% end %>
   <div class="booking-box">
     <div class="title">
-        <div class="secondary-title">
-          <p>NEW VEHICLE</p>
+        <div class="secondary-title" style="margin: 0">
+          <p>CREATE A NEW MODEL</p>
         </div>
       </div>
     <%= simple_form_for(@model) do |f| %>
+      <% @model.errors.each do |attr, msg| %>
+        <div class="error-messages">
+          <p>Please review your entries</p>
+         <li> <%= @model.errors.full_messages_for(attr).first if @model.errors[attr].first == msg %></li>
+        </div>
+      <% end %>
       <div class="booking-box-details">
-        <div class="form-inputs">
-          <%= f.input :name %>
-        </div>
-        <div class="form-inputs">
-          <%= f.input :photo, as: :file %>
-        </div>
-        <div class="form-inputs">
-          <%= f.input :available %>
-        </div>
-        <div class="form-inputs">
-          <%= f.input :category %>
-        </div>
-        <div class="form-inputs">
-          <%= f.input :capacity %>
-        </div>
-        <div class="form-inputs">
-          <%= f.input :power %>
-        </div>
-        <div class="form-inputs">
-          <%= f.input :bodytype %>
-        </div>
-        <div class="form-inputs">
-          <%= f.input :cargolength %>
-        </div>
-        <div class="form-inputs">
-          <%= f.input :payload %>
-        </div>
-        <div class="form-inputs">
-          <%= f.input :grosvw %>
-        </div>
-        <div class="form-inputs">
-          <%= f.input :fuel %>
-        </div>
-        <div class="form-inputs">
-          <%= f.input :year %>
+        <div class="form-divider">
+          <div class="form-section-title">
+            <div class="form-title">
+              <p>Main Detail</p>
+            </div>
+          </div>
+
+          <div class="form-breaker">
+            <div class="form-inputs">
+              <%= f.input :name %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :classification_id, collection: Classification.order(:name).pluck(:name, :id), prompt: "Choose a Class"  %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :subcategory_id, collection: Subcategory.order(:name).pluck(:name, :id), prompt: "Choose a sub-category"  %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :make_id, collection: Make.order(:name).pluck(:name, :id), prompt: "Choose a The Make"    %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :fuel_id, collection: Fuel.order(:name).pluck(:name, :id), prompt: "Choose Fuel Type"   %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :year %>
+            </div>
+          </div>
         </div>
 
-        <div class="form-inputs">
-          <%= f.input :notes %>
-        </div>
-        <div class="form-inputs">
-          <%= f.input :make_id,
-                      collection: @makes,
-                      as: :radio_buttons %>
+
+        <div class="form-divider">
+          <div class="form-section-title">
+            <div class="form-title">
+              <p>Technical Detail</p>
+            </div>
+          </div>
+
+          <div class="form-breaker">
+
+            <div class="form-inputs">
+              <%= f.input :power %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :bodytype %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :cargolength, collection: 1..60  %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :seats, collection: 1..60  %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :payload, collection: 1..60  %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :grosvw, collection: 0..30  %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :duty, collection: 18..60  %>
+            </div>
+          </div>
         </div>
 
+        <div class="form-divider">
+          <div class="form-section-title">
+            <div class="form-title">
+              <p>Other Detail</p>
+            </div>
+          </div>
+
+          <div class="form-breaker">
+
+            <div class="form-inputs">
+              <%= f.input :notes %>
+            </div>
+            <div class="form-inputs" id="checkme">
+              <%= f.input :available, boolean_style: :inline %>
+            </div>
+            <div class="form-inputs" id="checkme">
+              <%= f.input :new, boolean_style: :inline, input_html: {id: "select2"} %>
+            </div>
+              <div class="form-inputs">
+                <%= f.input :mileage %>
+              </div>
+            <div class="form-inputs">
+              <%= f.input :photo, as: :file %>
+            </div>
+          </div>
+        </div>
 
         <div class="form-actions">
           <div class="booking-update-btn">
-            <%= link_to "Back", dashboard_path, class: "secondary-button" %>
-            <%= f.button :submit, class: "primary-button" %>
+            <%= f.button :submit, class: "form-button", :confirm => 'Are All details correct?' %>
+            <%# raise %>
           </div>
         </div>
       </div>

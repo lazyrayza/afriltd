@@ -10,6 +10,8 @@ require("channels")
 //= require jquery
 //= require jquery_ujs
 //= require jquery.fullpage
+//= require simple_form_autocomplete
+
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -26,6 +28,8 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import ahoy from "ahoy.js";
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';

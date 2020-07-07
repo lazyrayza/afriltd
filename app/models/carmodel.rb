@@ -1,8 +1,14 @@
 class Carmodel < ApplicationRecord
   mount_uploader :photo, PhotoUploader
+  visitable :ahoy_visit
+
 
   belongs_to :make
+  belongs_to :classification
+  belongs_to :subcategory
+  belongs_to :fuel
   has_one :photo
+  has_many :visits, class_name: "Ahoy::Visit"
 
 
   include PgSearch

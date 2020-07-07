@@ -74,3 +74,33 @@
   }
 
 }
+
+
+.secondary-button{
+  color: $yellow;
+}
+
+
+
+.request-btn {
+    min-width: 45%;
+    height: 40px;
+    background-color: $blue;
+    color: #fff;
+    border-radius: 0px 0px 25px 0px;
+    display: flex;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 5%;
+    transition: ease 1s;
+    padding: 2px;
+    p{
+      margin: auto;
+      font-size: 1rem;
+    }
+    &:hover{
+      box-shadow: -8px 10px 33px 0px rgba(0,0,0,0.21);
+      background-color: $dark_blue;
+      cursor: pointer;
+    }
+}

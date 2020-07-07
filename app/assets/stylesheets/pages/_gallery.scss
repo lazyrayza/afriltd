@@ -1,6 +1,7 @@
 .gallery-container{
   margin-top: 7%;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   display: flex;
   background-color: white;
 }

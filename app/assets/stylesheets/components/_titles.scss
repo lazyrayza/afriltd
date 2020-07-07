@@ -159,6 +159,12 @@
   }
 }
 
+.modal-title{
+  margin: auto;
+  font-size: 2rem;
+  color: $blue;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .vehicle-title p {

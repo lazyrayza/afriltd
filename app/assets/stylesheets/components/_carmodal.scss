@@ -1,0 +1,93 @@
+.modal-body {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-content{
+  border-radius: 0px 0px 50px 0px;
+  min-width: 75vw;
+}
+.car-modal{
+  height: 75vh;
+}
+
+.car-modal-info{
+  display: flex;
+  // width: 25%;
+}
+
+.left-section{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-content: space-between;
+  height: 75vh;
+}
+.modal-vehicle-image{
+  display: flex;
+  justify-content: center;
+  .modal-image{
+    width: 40%;
+    height: 100%;
+  }
+}
+
+.modal-vehicle-info{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 45%;
+  .vehicle-info{
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    text-align: start;
+    p{
+      font-size: 15px;
+      padding-left: 5px;
+    }
+  }
+}
+
+
+.right-section{
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid grey;
+  height: 75vh;
+  width: 30%;
+}
+
+.modal-logo{
+  width: 70% !important;;
+  height: 100%;
+  object-fit: fill;
+}
+
+.modal-make-info{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.make-image{
+  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: space-around;
+  min-height: 150px;
+}
+
+.make-info{
+  border-bottom: 1px solid grey;
+  // border-left: 1px solid grey;
+  text-align: start;
+  p{
+    font-size: 15px;
+    padding-left: 5px;
+  }
+}
+
+
+.request-quote{
+  height: inherit;
+  display: flex;
+  justify-content: center;
+}
+

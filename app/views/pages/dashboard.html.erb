@@ -12,6 +12,7 @@
 </style>
 
 <div class="dashboard">
+  <%# line_chart Ahoy::Visit.group_by_day(:started_at).count %>
 
   <div class="link-box">
    <%= link_to "New Model", new_carmodel_path %>
