@@ -1,0 +1,23 @@
+<div class="container" style="margin-top: 8%">
+  <div class="product-holder">
+    <% if @vehicles.empty? == false %>
+      <% @vehicles.each do |model| %>
+        <div class=" box vehicle page-box" data-toggle="modal" data-target="#myModal_<%= model.id %>">
+          <div class="vehicle-title" >
+            <p><%= model.name %></p>
+          </div>
+          <div class="vehicle-photo eicher-truck-photo">
+            <%= cl_image_tag model.photo %>
+          </div>
+       </div>
+       <%= render "shared/show_car_modal", carmodel: model %>
+      <% end %>
+    <% else %>
+      <div class=" box vehicle page-box">
+        <div class="secondary-title" >
+          <p>No Stock for <%= @make.name.upcase %></p>
+        </div>
+      </div>
+    <% end  %>
+  </div>
+</div>

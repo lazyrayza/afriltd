@@ -6,6 +6,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :classes
+  has_one :photo
+
 
 
   def full_name

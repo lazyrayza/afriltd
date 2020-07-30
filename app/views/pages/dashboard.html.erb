@@ -60,7 +60,7 @@
           <div class="link-name">
              <p>New Vehicle</p>
           </div>
-          <%= link_to new_carmodel_path do %>
+          <%= link_to new_vehicle_path do %>
             <div class="link-arrow">
               <i class="fas fa-arrow-circle-right"></i>
             </div>
@@ -168,6 +168,22 @@
             </div>
           </div>
         </div>
+        <%= link_to vehicles_path do%>
+          <div class="dash-item">
+            <div class="item-icon yellow">
+              <i class="fas fa-car"></i>
+            </div>
+            <div class="item-info">
+              <div class="item-title">
+                <p> <%= Vehicle.all.count %> </p>
+              </div>
+              <div class="item-content">
+                <p>Vehicle Available</p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
         <div class="dash-item">
           <div class="item-icon blue">
             <i class="fas fa-users"></i>

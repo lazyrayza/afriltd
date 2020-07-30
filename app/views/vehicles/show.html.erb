@@ -1,0 +1,101 @@
+<div class="vehicle-container">
+  <div class="vehicle-content">
+    <div class="vehicle-info">
+
+      <div class="left-section">
+        <div class="title">
+          <div class="modal-title">
+            <p><%= @vehicle.carmodel.make.name %>, <%= @vehicle.carmodel.name %></p>
+          </div>
+        </div>
+        <div class="modal-@vehicle-image">
+          <%= cl_image_tag @vehicle.carmodel.photo, height: 300, width: 400, class: 'modal-image' %>
+        </div>
+        <div class="modal-vehicle-info">
+          <div class="vehicle-info">
+            <p>Type: <%= @vehicle.carmodel.subcategory.category.name %>/<%= @vehicle.carmodel.subcategory.name %></p>
+          </div>
+          <div class="vehicle-info">
+            <p>Year: <%= @vehicle.year %></p>
+          </div>
+          <div class="vehicle-info">
+            <% if @vehicle.gear? %>
+              <p>Gear box: Manual</p>
+            <% else %>
+              <p>Gear box: Automatic</p>
+            <% end %>
+          </div>
+          <div class="vehicle-info">
+            <% if @vehicle.aircon? %>
+              <p>Aircon: Yes</p>
+            <% else %>
+              <p>Aircon: No</p>
+            <% end %>
+          </div>
+          <div class="vehicle-info">
+            <p>Horsepower: <%= @vehicle.carmodel.power %> hp</p>
+          </div>
+          <div class="vehicle-info">
+            <p>Body Type: <%= @vehicle.carmodel.bodytype %></p>
+          </div>
+          <div class="vehicle-info">
+            <% if @vehicle.carmodel.cargolength? %>
+              <p>Cargo length: <%= @vehicle.carmodel.cargolength %> feet</p>
+            <% else %>
+              <p>Cargo length: N/A</p>
+            <% end %>
+
+          </div>
+          <div class="vehicle-info">
+            <p>Payload: <%= @vehicle.carmodel.payload %> Tons</p>
+          </div>
+          <div class="vehicle-info">
+            <p>Fuel: <%= Fuel.find(@vehicle.fuel_id).name %></p>
+          </div>
+          <div class="vehicle-info">
+            <% if @vehicle.carmodel.grosvw.nil? %>
+              <p>Gross Vehicle Weight: N/A</p>
+            <% else %>
+              <p>Gross Vehicle Weight: <%= @vehicle.carmodel.grosvw %> Tons</p>
+            <% end %>
+          </div>
+          <div class="vehicle-info">
+            <p>Seats: <%= @vehicle.carmodel.seats %></p>
+          </div>
+          <div class="vehicle-info">
+            <p>Mileage: <%= @vehicle.mileage %></p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="make-image">
+          <%= cl_image_tag @vehicle.carmodel.make.logo, class: 'modal-logo'  %>
+        </div>
+        <div class="modal-make-info">
+          <div class="make-info">
+            <p>Make: <%= @vehicle.carmodel.make.name %></p>
+          </div>
+          <div class="make-info">
+            <p>Country Origin: <%= @vehicle.carmodel.make.country %></p>
+          </div>
+          <div class="make-info">
+            <p>New: <%= @vehicle.carmodel.new? %></p>
+          </div>
+          <div class="make-info">
+            <p>Spare Available: Full Stock</p>
+          </div>
+        </div>
+
+        <div class="request-quote">
+          <div class="request-btn">
+            <p>Request Quote</p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

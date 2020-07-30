@@ -9,6 +9,7 @@ class Carmodel < ApplicationRecord
   belongs_to :fuel
   has_one :photo
   has_many :visits, class_name: "Ahoy::Visit"
+  has_many :vehicles, dependent: :destroy
 
 
   include PgSearch

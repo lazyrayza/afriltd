@@ -16,9 +16,13 @@ Rails.application.routes.draw do
 
   # resources :makes, only: [:show]
   resources :carmodels, only: [ :show, :new, :create, :index, :edit, :update ]
+    authenticate :user do
+      resources :vehicles
+    end
 
   authenticate :user, ->(user) { user.admin? } do
     mount Blazer::Engine, at: "blazer"
   end
+
 
 end

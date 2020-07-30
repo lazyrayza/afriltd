@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_07_111629) do
+ActiveRecord::Schema.define(version: 2020_07_08_105757) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -114,13 +114,10 @@ ActiveRecord::Schema.define(version: 2020_07_07_111629) do
 
   create_table "carmodels", force: :cascade do |t|
     t.string "name"
-    t.integer "year"
     t.string "photo"
     t.integer "seats"
     t.boolean "available"
     t.boolean "new"
-    t.boolean "gear"
-    t.boolean "aircon"
     t.integer "duty"
     t.string "notes"
     t.bigint "make_id"
@@ -133,12 +130,9 @@ ActiveRecord::Schema.define(version: 2020_07_07_111629) do
     t.string "grosvw"
     t.string "fuel"
     t.bigint "subcategory_id"
-    t.bigint "fuel_id"
     t.bigint "classification_id"
     t.bigint "ahoy_visit_id"
-    t.integer "mileage"
     t.index ["classification_id"], name: "index_carmodels_on_classification_id"
-    t.index ["fuel_id"], name: "index_carmodels_on_fuel_id"
     t.index ["make_id"], name: "index_carmodels_on_make_id"
     t.index ["subcategory_id"], name: "index_carmodels_on_subcategory_id"
   end
@@ -194,10 +188,31 @@ ActiveRecord::Schema.define(version: 2020_07_07_111629) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "vehicles", force: :cascade do |t|
+    t.string "engine_number"
+    t.string "color"
+    t.string "purchase_price"
+    t.string "freight_cost"
+    t.string "other_cost"
+    t.string "accessories"
+    t.string "photo"
+    t.bigint "carmodel_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "mileage"
+    t.bigint "fuel_id"
+    t.integer "year"
+    t.boolean "gear"
+    t.boolean "aircon"
+    t.index ["carmodel_id"], name: "index_vehicles_on_carmodel_id"
+    t.index ["fuel_id"], name: "index_vehicles_on_fuel_id"
+  end
+
   add_foreign_key "carmodels", "classifications"
-  add_foreign_key "carmodels", "fuels"
   add_foreign_key "carmodels", "makes"
   add_foreign_key "carmodels", "subcategories"
   add_foreign_key "subcategories", "categories"
   add_foreign_key "users", "classifications"
+  add_foreign_key "vehicles", "carmodels"
+  add_foreign_key "vehicles", "fuels"
 end

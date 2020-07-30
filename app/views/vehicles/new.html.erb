@@ -1,0 +1,101 @@
+
+
+<div class="container-booking" >
+  <%= link_to dashboard_path, class: "secondary-button" do %>
+    <i class="fas fa-hand-point-left fa-3x"></i>
+  <% end %>
+  <div class="booking-box">
+    <div class="title">
+        <div class="secondary-title" style="margin: 0">
+          <p>CREATE A NEW VEHICLE</p>
+        </div>
+      </div>
+    <%= simple_form_for(@vehicle) do |f| %>
+      <% @vehicle.errors.each do |attr, msg| %>
+        <div class="error-messages">
+          <p>Please review your entries</p>
+         <li> <%= @vehicle.errors.full_messages_for(attr).first if @vehicle.errors[attr].first == msg %></li>
+        </div>
+      <% end %>
+      <div class="booking-box-details">
+        <div class="form-divider">
+          <div class="form-section-title">
+            <div class="form-title">
+              <p>Main Detail</p>
+            </div>
+          </div>
+
+          <div class="form-breaker">
+            <div class="form-inputs">
+              <%= f.input :carmodel_id, collection: Carmodel.order(:name).pluck(:name, :id), prompt: "Choose a Model"  %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :engine_number %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :mileage %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :fuel_id, collection: Fuel.order(:name).pluck(:name, :id) %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :year, collection: 1990..(Date.today.year) %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :color %>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-divider">
+          <div class="form-section-title">
+            <div class="form-title">
+              <p>Costing Detail</p>
+            </div>
+          </div>
+
+          <div class="form-breaker">
+
+            <div class="form-inputs">
+              <%= f.input :purchase_price %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :freight_cost %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :other_cost %>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-divider">
+          <div class="form-section-title">
+            <div class="form-title">
+              <p>Other Detail</p>
+            </div>
+          </div>
+
+          <div class="form-breaker">
+            <div class="form-inputs">
+              <%= f.input :gear %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :aircon %>
+            </div>
+            <div class="form-inputs">
+              <%= f.input :photo, as: :file %>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <div class="booking-update-btn">
+            <%= f.button :submit, class: "form-button", :confirm => 'Are All details correct?' %>
+            <%# raise %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

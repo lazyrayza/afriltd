@@ -129,6 +129,11 @@
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 2%;
+  min-height: 40vh;
+  height: 100%;
+  a{
+    text-decoration: none;
+  }
   .blue{
     background-color: $blue;
   }
@@ -173,6 +178,7 @@
   display: flex;
   justify-content: space-around;
   box-shadow: -4px 10px 38px 0px rgba(0,0,0,0.19);
+  text-decoration: none;
 
 
   .blue{
@@ -243,7 +249,7 @@
   margin: 2%;
   .table-title{
     padding: 2%;
-    font-size: 30px;
+    font-size: 24px;
     color: $dark_grey;
 
   }

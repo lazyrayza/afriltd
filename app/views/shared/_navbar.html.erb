@@ -18,7 +18,7 @@
             </li>
 
             <li class="nav-item dropdown">
-              <p class="dropdown-toggle" id="navbarDropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> OUR BRANDS </p>
+              <p class="dropdown-toggle" id="navbarDropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> OUR BRANDS </p>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <% @makes.each do |make| %>
                   <%= link_to make.name, make_path(make),
@@ -36,12 +36,14 @@
               <p><%= link_to "CONTACT US", contact_us_path %></p>
             </li>
             <% if user_signed_in? %>
-              <li class="nav-item dropdown">
-                  <%= link_to "Dashboard", dashboard_path, class: "dropdown-item" %>
+              <li class="nav-item">
+                  <%= link_to "Dashboard", dashboard_path %>
+              </li>
+              <li class="nav-item">
                   <%= link_to "Edit account", edit_user_registration_path(current_user)  %>
-                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-
-
+              </li>
+              <li class="nav-item">
+                  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
               </li>
             <% end %>
           </div>

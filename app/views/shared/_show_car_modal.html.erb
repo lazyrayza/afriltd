@@ -19,21 +19,17 @@
                   <p>Type: <%= carmodel.subcategory.category.name %>/<%= carmodel.subcategory.name %></p>
                 </div>
                 <div class="vehicle-info">
-                  <p>Year: <%= carmodel.year %></p>
+                  <p>Year: <%# carmodel.year %></p>
                 </div>
                 <div class="vehicle-info">
-                  <% if carmodel.gear? %>
+                  <%# if carmodel.gear? %>
                     <p>Gear box: Manual</p>
-                  <% else %>
+                  <%# else %>
                     <p>Gear box: Automatic</p>
-                  <% end %>
+                  <%# end %>
                 </div>
                 <div class="vehicle-info">
-                  <% if carmodel.aircon? %>
-                    <p>Aircon: Yes</p>
-                  <% else %>
-                    <p>Aircon: No</p>
-                  <% end %>
+                  <p>Aircon: Yes</p>
                 </div>
                 <div class="vehicle-info">
                   <p>Horsepower: <%= carmodel.power %> hp</p>
@@ -53,7 +49,9 @@
                   <p>Payload: <%= carmodel.payload %> Tons</p>
                 </div>
                 <div class="vehicle-info">
-                  <p>Fuel: <%= carmodel.fuel.name %></p>
+                  <p>Fuel: <% Vehicle.where(carmodel: carmodel).each do |vehicle| %>
+                     <%= Fuel.find( vehicle.fuel_id).name %>, </p>
+                  <% end %>
                 </div>
                 <div class="vehicle-info">
                   <% if carmodel.grosvw.nil? %>
@@ -66,7 +64,12 @@
                   <p>Seats: <%= carmodel.seats %></p>
                 </div>
                 <div class="vehicle-info">
-                  <p>Mileage: <%= carmodel.mileage %></p>
+                  <% Vehicle.where(carmodel_id: carmodel.id).each do |vehicle| %>
+                    <% array = [] %>
+                    <% array << vehicle.mileage %>
+                      <p>Mileage: <% array.each do |mileage| %> <%=   mileage.to_s + ","%> </p>
+                    <% end %>
+                  <% end %>
                 </div>
 
               </div>
@@ -88,6 +91,9 @@
                 </div>
                 <div class="make-info">
                   <p>Spare Available: Full Stock</p>
+                </div>
+                <div class="make-info">
+                  <p>Stock Available: <%= Vehicle.where(carmodel_id: carmodel.id).count %></p>
                 </div>
               </div>
               <div class="users-check">
