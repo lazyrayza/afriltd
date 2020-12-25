@@ -22,11 +22,11 @@
                   <p>Year: <%# carmodel.year %></p>
                 </div>
                 <div class="vehicle-info">
-                  <%# if carmodel.gear? %>
+                  <% if carmodel.make_id = 29 %>
                     <p>Gear box: Manual</p>
-                  <%# else %>
+                  <% else %>
                     <p>Gear box: Automatic</p>
-                  <%# end %>
+                  <% end %>
                 </div>
                 <div class="vehicle-info">
                   <p>Aircon: Yes</p>
@@ -87,7 +87,7 @@
                   <p>Country Origin: <%= carmodel.make.country %></p>
                 </div>
                 <div class="make-info">
-                  <p>New: <%= carmodel.new? %></p>
+                  <p>New: YES</p>
                 </div>
                 <div class="make-info">
                   <p>Spare Available: Full Stock</p>
@@ -102,8 +102,11 @@
               </div>
               <div class="request-quote">
                 <div class="request-btn">
-                  <p>Request Quote</p>
+                  <a href="mailto:sales@africarriers.co.tz?&subject=<%= carmodel.make.name %> <%= carmodel.name %> Enquiry & Price&body=Dear Sales Team, I would like to enquire about the price and availability of <%= carmodel.make.name %> <%= carmodel.name %>">
 
+
+                    <p>Request Quote</p>
+                  </a>
                 </div>
               </div>
             </div>

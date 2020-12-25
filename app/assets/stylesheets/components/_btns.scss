@@ -99,6 +99,10 @@
       margin: auto;
       font-size: 1.5rem;
     }
+    a {
+      text-decoration:inherit !important;
+      color: inherit;
+    }
     &:hover{
       background-color: $yellow;
       cursor: pointer;
