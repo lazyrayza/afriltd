@@ -12,14 +12,14 @@
                 </div>
               </div>
               <div class="modal-vehicle-image">
-                <%= cl_image_tag carmodel.photo, height: 300, width: 400, class: 'modal-image' %>
+                <%= cl_image_tag carmodel.make.logo, height: 300, width: 400, class: 'modal-image' %>
               </div>
               <div class="modal-vehicle-info">
                 <div class="vehicle-info">
                   <p>Type: <%= carmodel.subcategory.category.name %>/<%= carmodel.subcategory.name %></p>
                 </div>
                 <div class="vehicle-info">
-                  <p>Year: <%# carmodel.year %></p>
+                  <p>Make: <%= carmodel.make.name %></p>
                 </div>
                 <div class="vehicle-info">
                   <% if carmodel.make_id = 29 %>
@@ -67,7 +67,8 @@
                   <% Vehicle.where(carmodel_id: carmodel.id).each do |vehicle| %>
                     <% array = [] %>
                     <% array << vehicle.mileage %>
-                      <p>Mileage: <% array.each do |mileage| %> <%=   mileage.to_s + ","%> </p>
+                    <p>Mileage: <% array.each do |mileage| %>
+                      <%=   mileage.to_s + ","%> </p>
                     <% end %>
                   <% end %>
                 </div>
@@ -77,15 +78,13 @@
 
             <div class="right-section">
               <div class="make-image">
-                <%= cl_image_tag carmodel.make.logo, class: 'modal-logo'  %>
+                <%= cl_image_tag carmodel.photo, class: 'modal-logo'  %>
+                <%# raise %>
               </div>
               <div class="modal-make-info">
-                <div class="make-info">
-                  <p>Make: <%= carmodel.make.name %></p>
-                </div>
-                <div class="make-info">
+                <!-- <div class="make-info">
                   <p>Country Origin: <%= carmodel.make.country %></p>
-                </div>
+                </div> -->
                 <div class="make-info">
                   <p>New: YES</p>
                 </div>
@@ -103,8 +102,6 @@
               <div class="request-quote">
                 <div class="request-btn">
                   <a href="mailto:sales@africarriers.co.tz?&subject=<%= carmodel.make.name %> <%= carmodel.name %> Enquiry & Price&body=Dear Sales Team, I would like to enquire about the price and availability of <%= carmodel.make.name %> <%= carmodel.name %>">
-
-<%# raise %>
                     <p>Request Quote</p>
                   </a>
                 </div>

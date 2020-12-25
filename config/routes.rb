@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "/contact-us", to: "pages#contactus"
   get "/about-us", to: "pages#aboutus"
   get "/news-&-media", to: "pages#newsandmedia"
-
+  get "/test", to: "pages#test"
   get "/career", to: "pages#career"
   get "/dashboard", to: "pages#dashboard"
   get "/gallery", to: "pages#gallery"

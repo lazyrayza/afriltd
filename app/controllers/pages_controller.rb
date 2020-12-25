@@ -5,6 +5,11 @@ class PagesController < ApplicationController
     @makes = Make.all
   end
 
+  def test
+    @dragons = Make.where(name = "Golden Dragon")
+
+  end
+
   def dashboard
     @commercial = Classification.where(name: "Commercial")
     @retail = Classification.where(name: "Retail")
@@ -34,18 +39,18 @@ class PagesController < ApplicationController
   end
 
   def eicher
-    if params[:query].present?
-      @models = Carmodel.where(name: 'Eicher').search_by_name_and_category(params[:query])
-      respond_to do |format|
-        format.html { render eicher_path }
-        format.js
-      end
-    else
-      @models = Carmodel.where(available: true)
-    end
+    # if params[:query].present?
+    #   @models = Carmodel.where(name: 'Eicher').search_by_name_and_category(params[:query])
+    #   respond_to do |format|
+    #     format.html { render eicher_path }
+    #     format.js
+    #   end
+    # else
+    #   @models = Carmodel.where(available: true)
+    # end
 
-    @make = Make.where(name: 'Eicher')
+    # @make = Make.where(name: 'Eicher')
 
-    @models = Carmodel.all
+    # @models = Carmodel.all
   end
 end
