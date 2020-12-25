@@ -97,14 +97,14 @@
                 </div>
               </div>
               <div class="users-check">
-                <% arr = [0..15] %>
-                <p><%= rand(1..15) %> people have viewed this vehicle today!</p>
+                <% arr = [0..20] %>
+                <p><%= rand(5..20) %> people have viewed this vehicle today!</p>
               </div>
               <div class="request-quote">
                 <div class="request-btn">
                   <a href="mailto:sales@africarriers.co.tz?&subject=<%= carmodel.make.name %> <%= carmodel.name %> Enquiry & Price&body=Dear Sales Team, I would like to enquire about the price and availability of <%= carmodel.make.name %> <%= carmodel.name %>">
 
-
+<%# raise %>
                     <p>Request Quote</p>
                   </a>
                 </div>

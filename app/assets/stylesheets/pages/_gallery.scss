@@ -8,6 +8,7 @@
 .display-box{
   background: white;
   width: 85vw;
+  min-height: 100vh;
 }
 
 
@@ -48,7 +49,7 @@
 }
 .major-display{
   height: 100%;
-  width: 85vw;
+  width: 100%;
   display: none;
   display: flex;
   flex-direction: column;
@@ -102,6 +103,11 @@
   .gallery-box-photo img{
     width: 190px !important;
   }
+
+  .display-box{
+    margin-top: inherit;
+  }
+
 
 
 }

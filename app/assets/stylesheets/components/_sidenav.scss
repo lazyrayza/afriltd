@@ -14,7 +14,7 @@ $colors: (
   max-width: 15vw;
   min-width: 15vw;
   background: $dark_blue;
-
+  min-height: 100vh;
   p{
     color: white;
   }
@@ -37,6 +37,12 @@ span{
 }
 .list-group-item{
   background-color: $dark_blue !important;
+}
+
+.sidenav-buttons-holder{
+  display: flex;
+  flex-direction: column;
+  padding-top: 35%;
 }
 
 .show-border{
@@ -86,6 +92,7 @@ span{
   }
   .sidenav-buttons-holder{
     display: flex;
+    padding-top: 0;
   }
 }
 
