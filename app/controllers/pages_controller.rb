@@ -6,7 +6,6 @@ class PagesController < ApplicationController
   end
 
   def test
-    @dragons = Make.where(name = "Golden Dragon")
 
   end
 
