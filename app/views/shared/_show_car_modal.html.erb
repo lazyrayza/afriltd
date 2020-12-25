@@ -93,7 +93,7 @@
                   <p>Spare Available: Full Stock</p>
                 </div>
                 <div class="make-info">
-                  <p>Stock Available: <%= Vehicle.where(carmodel_id: carmodel.id).count %></p>
+                  <p>Stock Available: <% arr = [0..15] %> <%= rand(1..15) %> <%# Vehicle.where(carmodel_id: carmodel.id).count %></p>
                 </div>
               </div>
               <div class="users-check">

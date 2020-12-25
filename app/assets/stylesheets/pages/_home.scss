@@ -122,21 +122,24 @@ $light_yellow: #C2B689;
 .service-slideshow-holder{
   display: grid;
   flex-direction: column;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
   width: 75%;
   margin: 1%;
 }
 
 .slide-show{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  // justify-content: space-between;
+  // flex-wrap: wrap;
   .service{
     background-image: url('https://images.pexels.com/photos/4116220/pexels-photo-4116220.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
     transition: ease 0.5s;
+    margin: 5px;
+    justify-content: space-evenly;
     p{
       color: $white;
       text-align: end;
