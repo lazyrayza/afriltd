@@ -3,6 +3,5 @@ class RemoveColumnsFromCarmodels < ActiveRecord::Migration[6.0]
     remove_column :carmodels, :mileage
     remove_column :carmodels, :fuel_id
     remove_column :carmodels, :year
-    remove_column :carmodels, :aircon
   end
 end
